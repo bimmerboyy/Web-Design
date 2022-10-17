@@ -14,12 +14,33 @@
 <body>
 
     <div class="container">
+
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a href="#" class="nav-link active">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Ocene</a>
+                    <a class="dropdown-item" href="#">Predmeti</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Prosek</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">Vise info</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link disabled">Disabled</a>
+            </li>
+        </ul>
         <div class="row">
             <div class="col-md-4 col-12 col-sm-6">
                 <p class="text-primary">Ovo je prvi paragraf</p>
             </div>
             <div class="col-md-4 col-12 col-sm-6">
-                <img src="images/преузимање.jpeg" width="200px" height="200px" alt="Ovde treba da bude prikazan logo">
+                <img src="images/преузимање.jpeg" img-fluid alt="Ovde treba da bude prikazan logo">
             </div>
             <div class="col-md-4 col-12 col-sm-6">
                 <h1 class="text-danger">Naslov u trecem divu</h1>
@@ -59,6 +80,37 @@
                         </tr>
                     </tbody>
                 </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="jumbotron">
+                    <h1 class="display-3">Obavestenje</h1>
+                    <hr class="my-2">
+                    <p class="lead">
+                        <p>Danas smo ucili BootStrap v4. Primer jumbotron</p>
+                        <a class="btn btn-primary btn-lg" href="Jumbo action link" role="button">Klik za vise detalja
+                        </a>
+                    </p>
+                </div>
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                    <strong>Nesto nije u redu</strong>
+                </div>
+                <a href="#" class="btn btn-primary">Ovo je neki link</a>
+
+                <div class="card border-primary">
+                    <img class="card-img-top" src="holder.js/100px180/" alt="">
+                    <div class="card-body">
+                        <h4 class="card-title">Priroda</h4>
+                        <p class="card-text">Slika prirode</p>
+                    </div>
+                </div>
+                <script>
+                    $(".alert").alert();
+                </script>
             </div>
         </div>
     </div>
