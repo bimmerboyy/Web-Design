@@ -1,11 +1,19 @@
+//Osnove
+
 // console.log("Pozdrav iz konzole")
 //document.write("Pozdrav sa stranice")
 // console.error("POzdrav iz konzole")
 // console.warn("POzdrav iz konzole")
 //window.open()
-document.getElementById('poruka').innerrText = 'Pozdrav!!'
 
-console.log(document.getElementById('poruka').innerrText);
+//Ovaj kod ce da uzme div sa id="poruka" i u njega da upise
+//tekst "Pozdrav!!"
+// document.getElementById('poruka').innerrText = 'Pozdrav!!'
 
-window.alert("Pozdrav iz Popup-a")
-console.log("B" + "A"++"A")
+
+
+// window.alert("Pozdrav iz Popup-a")
+// console.log("B" + "A" + +"G" + "A")
+
+
+//Varijable i manipulacija istim
