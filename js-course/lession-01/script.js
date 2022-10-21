@@ -44,3 +44,16 @@
 
 // let rezultat = nekiBroj + drugiBroj;
 // console.log(rezultat); //70
+
+//Zamena mesta dveju varijabli
+
+let prviBroj = 5;
+let drugiBroj = 10;
+
+let treciTmp;
+
+treciTmp = prviBroj;
+prviBroj = drugiBroj;
+drugiBroj = treciTmp;
+console.log(prviBroj);
+console.log(drugiBroj);
