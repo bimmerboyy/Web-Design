@@ -73,6 +73,8 @@ console.log(godine);
 
 let recenica = "Ja sam " + ime + " imam " + godine + " godina.";
 
+recenica = `Ja sam ${ime} ima ${godine} godina`;
+
 console.log(recenica);
 
 console.log("Ja sam " + ime + " imam " + godine + " godina.");
@@ -85,7 +87,13 @@ recenica = "Sledece godine cu imati " + godine + " godina.";
 
 console.log(recenica);
 
-godine -= 2;
+godine++;
+
+
+recenica = "Za dvije  godine cu imati " + godine + " godina.";
+console.log(recenica);
+
+godine -= 3;
 
 recenica = "Prosle godine sam imao " + godine + " godina.";
 
