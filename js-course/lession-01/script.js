@@ -31,6 +31,12 @@
 // console.log(typeof(godine));
 
 let nekiBroj = 65;
-console.log(nekiBroj);
 
-console.log(CysecorBrojSubs);
+let drugiBroj = "5";
+
+console.log(typeof(drugiBroj));
+
+drugiBroj = parseInt(drugiBroj);
+
+let rezultat = nekiBroj + drugiBroj;
+console.log(rezultat);
