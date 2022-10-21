@@ -30,13 +30,17 @@
 
 // console.log(typeof(godine));
 
-let nekiBroj = 65;
+// let nekiBroj = 65;
 
-let drugiBroj = "5";
+// let drugiBroj = "5";
 
-console.log(typeof(drugiBroj));
+// console.log(typeof(drugiBroj)); //string
 
-drugiBroj = parseInt(drugiBroj);
+// drugiBroj = parseInt(drugiBroj);
 
-let rezultat = nekiBroj + drugiBroj;
-console.log(rezultat);
+// console.log(drugiBroj); //number
+
+// console.log(typeof(drugiBroj));
+
+// let rezultat = nekiBroj + drugiBroj;
+// console.log(rezultat); //70
