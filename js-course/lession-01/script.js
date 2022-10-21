@@ -19,3 +19,5 @@
 //Varijable i manipulacija istim
 
 let cysecor;
+
+cysecor = "Subscribe na moj kanal";
