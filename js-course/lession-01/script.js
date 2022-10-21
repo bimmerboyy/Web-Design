@@ -47,13 +47,16 @@
 
 //Zamena mesta dveju varijabli
 
-let prviBroj = 5;
-let drugiBroj = 10;
+// let prviBroj = 5;
+// let drugiBroj = 10;
 
-let treciTmp;
+// console.log("Prvi broj:" + prviBroj);
+// console.log("Drugi broj:" + drugiBroj);
 
-treciTmp = prviBroj;
-prviBroj = drugiBroj;
-drugiBroj = treciTmp;
-console.log(prviBroj);
-console.log(drugiBroj);
+// let treciTmp;
+
+// treciTmp = prviBroj;
+// prviBroj = drugiBroj;
+// drugiBroj = treciTmp;
+// console.log("Prvi broj:" + prviBroj);
+// console.log("Drugi broj:" + drugiBroj);
