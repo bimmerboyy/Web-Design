@@ -18,8 +18,19 @@
 
 //Varijable i manipulacija istim
 
-let cysecor = "Subscribe na moj kanal";
+// let cysecor = "Subscribe na moj kanal";
 
-let godine = 5;
+// let godine = "5";
 
-console.log(cysecor);
+// let mjesec = 3;
+
+// let rezultat = mjesec + godine;
+
+// let CysecorBrojSubs = "Cysecor ima 45k subs";
+
+// console.log(typeof(godine));
+
+let nekiBroj = 65;
+console.log(nekiBroj);
+
+console.log(CysecorBrojSubs);
