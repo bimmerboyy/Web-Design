@@ -17,3 +17,5 @@
 
 
 //Varijable i manipulacija istim
+
+let cysecor;
