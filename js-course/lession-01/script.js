@@ -61,4 +61,32 @@
 // console.log("Prvi broj:" + prviBroj);
 // console.log("Drugi broj:" + drugiBroj);
 
-let ime = "cysecor";
+//Nacini ispisivanja varijabli u konzoli
+
+let ime = "Cysecor";
+let prezime = "Sigurnost";
+let godine = 18;
+
+console.log(ime);
+console.log(prezime);
+console.log(godine);
+
+let recenica = "Ja sam " + ime + " imam " + godine + " godina.";
+
+console.log(recenica);
+
+console.log("Ja sam " + ime + " imam " + godine + " godina.");
+
+console.log("Ove godine imam " + godine + " godina.");
+
+godine++;
+
+recenica = "Sledece godine cu imati " + godine + " godina.";
+
+console.log(recenica);
+
+godine -= 2;
+
+recenica = "Prosle godine sam imao " + godine + " godina.";
+
+console.log(recenica);
