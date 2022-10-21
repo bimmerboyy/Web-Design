@@ -60,3 +60,5 @@
 // drugiBroj = treciTmp;
 // console.log("Prvi broj:" + prviBroj);
 // console.log("Drugi broj:" + drugiBroj);
+
+let ime = "cysecor";
