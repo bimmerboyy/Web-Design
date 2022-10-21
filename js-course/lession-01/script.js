@@ -18,6 +18,8 @@
 
 //Varijable i manipulacija istim
 
-let cysecor;
+let cysecor = "Subscribe na moj kanal";
 
-cysecor = "Subscribe na moj kanal";
+let godine = 5;
+
+console.log(cysecor);
