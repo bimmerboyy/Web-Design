@@ -11,15 +11,17 @@
 <body>
     <script>
         /* Ispisati poruku u HTML dokumentu: Na osnovu unetih brojeva casova: 
-                            ako je manje od 10 DOBRO JUTRO ako je 10-18 DOBAR DAN ako je vise od 18 DOBRO VECE */
+                                                            ako je manje od 10 DOBRO JUTRO ako je 10-18 DOBAR DAN ako je vise od 18 DOBRO VECE */
 
         var cas = Number(prompt("Unesite broj casova:"));
-        if (cas < 10) {
-            console.log("DOBRO JUTRO");
-        } else if (cas >= 10 && cas <= 18) {
-            console.log("DOBAR DAN");
-        } else {
-            console.log("DOBRO VECE");
+        if (!isNaN(cas) || cas < 0 || cas > 23) {
+            if (cas < 10) {
+                console.log("DOBRO JUTRO");
+            } else if (cas > 10 && cas < 18) {
+                console.log("DOBAR DAN");
+            } else {
+                console.log("DOBRO VECE");
+            }
         }
     </script>
 
