@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vezbe 6 JS</title>
+</head>
+
+<body>
+
+    <script>
+        // Racunati broj PI po formuli 
+        // PI/4 = 1 - 1 / 3 + 1 / 5-1 / 7+...
+        // racunanje prekinuti kada se dobije do clana koji je po apsolutnoj
+        // vrednosti manji od  broja eps 
+        // Funkcija za apsolutnu vrednost - Math.abs()
+
+        var suma = 0;
+        var i = 1;
+        var znak = 1;
+        var eps = Number(prompt("Unesite tacnost"));
+        do {
+            var clan = znak * 1 / i;
+            suma += clan;
+            i += 2;
+
+        }
+        while (Math.abs(clan) > eps);
+        alert("Pi iznosi " + (suma * 4));
+    </script>
+
+</body>
+
+</html>
