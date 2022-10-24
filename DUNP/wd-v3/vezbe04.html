@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vezba 4 JS</title>
+</head>
+
+<body>
+    <script>
+        /* Ispisati poruku u HTML dokumentu: Na osnovu unetih brojeva casova: 
+                            ako je manje od 10 DOBRO JUTRO ako je 10-18 DOBAR DAN ako je vise od 18 DOBRO VECE */
+
+        var cas = Number(prompt("Unesite broj casova:"));
+        if (cas < 10) {
+            console.log("DOBRO JUTRO");
+        } else if (cas >= 10 && cas <= 18) {
+            console.log("DOBAR DAN");
+        } else {
+            console.log("DOBRO VECE");
+        }
+    </script>
+
+</body>
+
+</html>
