@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vezbe 5 JS</title>
+</head>
+
+<body>
+
+    <script>
+        /*
+                                                                        na osnovu unetog broja n iscrtava se 
+                                                                        kvadraz pomocu zvezdica nXn, primer za n = 3
+                                                                        + + +
+                                                                        + + +
+                                                                        + + +
+                                                                        for(pocetni izraz;uslov;korak promene){
+                                                                        }
+
+                                                                         */
+        var i, j;
+        var linija = " ";
+        var n = Number(prompt("Unesite broj n:"));
+        if (!isNaN(n)) {
+            for (i = 0; i < n; i++) {
+                linija += "* ";
+
+
+            }
+            for (i = 0; i < n; i++) {
+                document.write(linija + "<br>");
+            }
+
+        }
+    </script>
+
+</body>
+
+</html>
