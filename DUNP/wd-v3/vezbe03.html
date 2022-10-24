@@ -11,20 +11,26 @@
 <body>
     <script>
         /*Napisati JS kod koji ce ispitati koliko je najmanje
-                    novcanica potrebno da bi se platio iznos od 1267 dinara
-                    U opticaju su novcanice od 500,200,100,50 i 1 dinar */
-        var iznos = prompt("Unesite iznos proizvoda", "1267");
-        var iznos = 1267;
-        var n500 = parseInt(iznos / 500);
-        var n100 = parseInt((iznos % 500) / 100);
-        var n200 = parseInt((iznos % 200) / 100);
-        var n50 = parseInt((iznos % 100) / 50);
-        var n1 = parseInt(iznos % 50);
-        console.log("Za placanje iznossa: " + iznos);
-        console.log("potrebno je : " + n500 + " novcanica od 500 dinara ");
-        console.log("potrebno je : " + n200 + " novcanica od 200 dinara ");
-        console.log("potrebno je : " + n100 + " novcanica od 100 dinara ");
-        console.log("potrebno je : " + n1 + " novcanica od 1 dinara ");
+                                                            novcanica potrebno da bi se platio iznos od 1267 dinara
+                                                            U opticaju su novcanice od 500,200,100,50 i 1 dinar */
+        //IsNaN proverava da li varijabla nije broj
+        //NaN - Not a Number
+        var iznos = Number(prompt("Unesite iznos proizvoda"));
+        if (isNaN(iznos)) {
+            var iznos = 1267;
+            var n500 = parseInt(iznos / 500);
+            var n100 = parseInt((iznos % 500) / 100);
+            var n200 = parseInt((iznos % 200) / 100);
+            var n50 = parseInt((iznos % 100) / 50);
+            var n1 = parseInt(iznos % 50);
+            console.log("Za placanje iznossa: " + iznos);
+            console.log("potrebno je : " + n500 + " novcanica od 500 dinara ");
+            console.log("potrebno je : " + n200 + " novcanica od 200 dinara ");
+            console.log("potrebno je : " + n100 + " novcanica od 100 dinara ");
+            console.log("potrebno je : " + n1 + " novcanica od 1 dinara ");
+        } else {
+            alert("Neispravan unos");
+        }
     </script>
 </body>
 
