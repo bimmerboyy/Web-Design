@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vezbe 7 JS</title>
+</head>
+
+<body>
+
+    <script>
+        // Korisnik zamisli kartu i unese njenu vrednost u promt-u
+        // program nasumcino generise kartu i proverava da li je korisnik pogodio broj 
+        // A,2,3,4,5,6,7,8,9,10
+        // 1,2,3,4,5,6,7,8,9,10
+        // Kreirati funkciju za generisanje nsumicnog broja
+
+        function genBroj() {
+            console.log(Math.floor(Math.random() * 10 + 1));
+            return broj;
+        }
+
+        var racunarBroj = genBroj();
+        var korisnikBroj = prompt("Unsite zamisljenu kartu");
+
+        if (kroisnikBroj == 'A') {
+            korisnikBroj = 1;
+        }
+        if (korisnikBroj == racunarBroj) {
+            alert("Bravo pogodili ste broj kao i racunar");
+        } else {
+            alert("Niste pogodili broj promasili ste za " + Math.abs(korisnikBroj - racunarBroj));
+        }
+    </script>
+
+</body>
+
+</html>
