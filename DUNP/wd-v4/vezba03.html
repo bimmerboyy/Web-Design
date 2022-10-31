@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS vezba 3</title>
+</head>
+
+<body>
+    <script>
+        /*
+                                                                                                                        uneti niz brojeva i niz imena a zatim ta dva niza sortirati
+                                                                                                                         */
+        var imena = prompt("Unesite imena za sortiranje:");
+        var brojevi = prompt("Unesite brojeve za sortiranje:");
+        ispisSortiranihImena(imena);
+        ispisSortiranihBrojeva(brojevi);
+
+        function ispisSortiranihImena(imena) {
+            const nizImena = imena.split(",");
+            document.write('Niz imena pre sortiranja izgleda ovako: ' + nizImena.join(';') + "<br>");
+            const sortiranaImena = nizImena.sort();
+            document.write('Niz imena posle sortiranja izgleda ovako: ' + sortiranaImena.join(';') + "<br>");
+        }
+
+        function ispisSortiranihBrojeva(brojevi) {
+            const nizBrojeva = brojevi.split(",");
+            document.write('Niz brojeva pre sortiranja izgleda ovako: ' + nizBrojeva.join(';') + "<br>");
+            const sortiraniBrojevi = nizBrojeva.sort();
+            document.write('Niz brojeva posle sortiranja izgleda ovako: ' + sortiraniBrojevi.join(';') + "<br>");
+        }
+    </script>
+
+</body>
+
+</html>
