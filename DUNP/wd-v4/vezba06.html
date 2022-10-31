@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS vezba 6</title>
+</head>
+
+<body>
+    <script>
+        var automobil1 = {
+            marka: "Mercedes",
+            godiste: 2014
+        };
+        var automobil2 = {
+            marka: "VW",
+            godiste: 2009
+        };
+        var automobili = {
+            marka: "Mazda",
+            godiste: 2020
+        };
+        let nizObjekata = [automobil1, automobil2, automobil3];
+        document.write(automobil1);
+
+        nizObjekata.sort(function comepare(a, b) {
+            return a.godiste - b.godiste;
+        })
+        nizObjekata.forEach();
+
+        function ispisObjekata(value, index, array) {
+            document.write(value.marka + " je godiste  ")
+        }
+    </script>
+
+</body>
+
+</html>
