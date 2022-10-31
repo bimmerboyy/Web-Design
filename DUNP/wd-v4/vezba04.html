@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS vezba 4</title>
+</head>
+
+<body>
+    <script>
+        /*
+                                                                                                    Unsite 5 imena studenata,zatim uklonite:
+                                                                                                    1.prvo ime
+                                                                                                    2. poslednje ime
+                                                                                                    3.trece ime
+                                                                                                    4.dodajte na pocetku ime
+                                                                                                    5.na kraju ime
+                                                                                                    6.na trecem mestu ime
+                                                                                                    7.umesto drugog i terceg dodati 2 nova imena 
+                                                                                                    */
+
+        var imena = prompt("Unsite imena:");
+        //delete nizImena[0];// NE PREPORUCUJE SE OVAJ NACIN
+
+        //BOLJE RESENJE
+        //1.
+        nizImena.shift();
+        document.write("2.zadatak " + nizImena.join('-'));
+        //2.
+        nizImena = imena.split(',');
+        const vrednost = nizImena.pop();
+
+        document.write("2.zadatak " + nizImena.join('-'));
+
+        //3.
+        nizImena = imena.split(',');
+        nizImena.splice(2, 1);
+
+        document.write("2.zadatak " + nizImena.join('-'));
+
+        //4.
+        nizImena = imena.split(',');
+        nizImena.unshift("Nikola");
+
+        document.write("2.zadatak " + nizImena.join('-'));
+
+        //5.
+        nizImena = imena.split(',');
+        nizImena.unshift("Nikola");
+        nizImena.push("Nikola");
+        document.write("2.zadatak " + nizImena.join('-'));
+
+        //6.
+        nizImena = imena.split(',');
+        nizImena.splice(2, 0, "Nikola");
+
+        document.write("2.zadatak " + nizImena.join('-'));
+
+        //7.
+
+        nizImena = imena.split(',');
+        nizImena.splice(1, 2, "Nikola");
+
+        document.write("2.zadatak " + nizImena.join('-'));
+    </script>
+
+
+
+
+
+</body>
+
+</html>
