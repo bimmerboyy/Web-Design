@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS vezba 2</title>
+</head>
+
+<body>
+    <script>
+        /*
+                                                Napisati JS kod koji ce ucitati niz ocena, azatim ispisati peosek tog studenta,korisnik 
+                                                unosi broj ocena
+                                                */
+        document.write("Prosek studentata je: " + izracunajProsek());
+
+        function izracunajProsek() {
+
+
+
+            const stringNiz = promt("Unesite ocene studenata,neka izmdeju ocena bude znak ',' ");
+
+            //I primer inputa: "10,9,9,10,8"
+            //II primer inputa: "100,-1,6,9,5,9"
+            // KAKO OD STRINGA DA DOBIJEMO NIZ OCENA???
+
+
+
+            const nizOcena = stringNiz.split(",");
+
+            // ["10","9","9","10","8","9","10"]
+
+            let brojValidnihOcena = 0;
+            const brojOcena = nizOcena.lenght;
+            let s = 0;
+            for (let i = 0; i < brojOcena; i++) {
+                const ocena = Number(nizOcena[i]);
+                if (ocena > 5 && ocena <= 10) {
+                    s += ocena;
+                    brojValidnihOcena++;
+                }
+            }
+            const prosek = s / brojValidnihOcena;
+            return prosek;
+        }
+    </script>
+
+</body>
+
+</html>
