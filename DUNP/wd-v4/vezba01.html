@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS vezba 1</title>
+</head>
+
+<body>
+    <p id="result">Rezultat naseg JS koda je:</p>
+    <script>
+        /*
+                            Napisati JavaScript kod kojih ce ispisati koliko dana ima trenutni mesec i koji je to mesec 
+                            */
+        var datum = new Date();
+        var m = datum.getMonth();
+        window.alert("Trenutno smo u mesecu : " + nadjiMesec(m));
+
+        // TODO: funkcija koja vraca ime meseca na osnovu poslatog indeksa 0- Januar,1 - Februar...
+        function nadjiMesec(indeks) {
+            let naziv = "";
+            switch (indeks) {
+                case 0:
+                    naziv = "Januar";
+                    break;
+                case 1:
+                    naziv = "Februar";
+                    break;
+                case 2:
+                    naziv = "Mart";
+                    break;
+                case 3:
+                    naziv = "April";
+                    break;
+                case 4:
+                    naziv = "Maj";
+                    break;
+                case 5:
+                    naziv = "Jun";
+                    break;
+                case 6:
+                    naziv = "Jul";
+                    break;
+                case 7:
+                    naziv = "Avgus";
+                    break;
+                case 8:
+                    naziv = "Septembar";
+                    break;
+                case 9:
+                    naziv = "Oktobar";
+                    break;
+                case 10:
+                    naziv = "Novembar";
+                    break;
+                case 11:
+                    naziv = "Decembar";
+                    break;
+
+
+
+
+            }
+        }
+    </script>
+
+
+</body>
+
+</html>
