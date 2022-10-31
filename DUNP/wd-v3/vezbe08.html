@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vezbe 8 JS</title>
+</head>
+
+<body>
+
+    <script>
+        //    Ispisati n elemenat Fibonacijevog niza 
+        //    Broj n se unosi preko promt-a
+        //    korsititi rekuzivne funskicje
+
+        //Uraditi kuci
+
+        //Ispisati trenutni datum u vasem gradu pomicu funkcije
+
+        (function() {
+            var trenutniDatum = new Date();
+            alert(trenutniDatum)
+            var trenutnoSati = trenutniDatum.getHours();
+            var trenutnoMinuti = trenutniMinuti.getMinutes();
+            var trenutneSekunde = trenutneSekunde.getSeconds();
+            alert("Trenutno vreme je: " + trenutnoSati + ":" + trenutnoMinuti + ":" + trenutneSekunde);
+
+        })();
+
+
+        //Arrow functions koja vraca spojeno ime i prezime korisnika
+
+        const StringZaIspis = (ime, prezime) => ime + " " + prezime;
+        alert(StringZaIspis("Aldin", "Mekic"));
+
+        let randomBroj = () => {
+            let broj = Math.floor(Math.random() * 10 + 1);
+            return broj;
+        }
+        console.log(broj);
+        alert(StringZaIspis("Aldin", "Mekic"));
+    </script>
+
+</body>
+
+</html>
