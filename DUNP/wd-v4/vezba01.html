@@ -12,11 +12,11 @@
     <p id="result">Rezultat naseg JS koda je:</p>
     <script>
         /*
-                            Napisati JavaScript kod kojih ce ispisati koliko dana ima trenutni mesec i koji je to mesec 
-                            */
+                                                                                                                                    Napisati JavaScript kod kojih ce ispisati koliko dana ima trenutni mesec i koji je to mesec 
+                                                                                                                                    */
         var datum = new Date();
         var m = datum.getMonth();
-        window.alert("Trenutno smo u mesecu : " + nadjiMesec(m));
+        window.alert("Trenutno smo u mesecu : " + nadjiMesecPrekoNiza(m) + ",ovaj mesec ima :" + brojDana(m) + " dana");
 
         // TODO: funkcija koja vraca ime meseca na osnovu poslatog indeksa 0- Januar,1 - Februar...
         function nadjiMesec(indeks) {
@@ -58,11 +58,17 @@
                 case 11:
                     naziv = "Decembar";
                     break;
-
-
-
-
             }
+        }
+
+        function nadjiMesecPrekoNiza(indeks) {
+            let nizMeseci = ["Januar", "Februar", "Mart", "April", "Maj", "Jun", "Jul", "Septembar", "Oktobar", "Novembar", "Decembar"];
+            return nizMeseci[indeks];
+        }
+
+        function brojDana(indeks) {
+            let nizDana = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+            return nizDana[indkes];
         }
     </script>
 
