@@ -11,8 +11,8 @@
 <body>
     <script>
         /*
-                                                                                                                        uneti niz brojeva i niz imena a zatim ta dva niza sortirati
-                                                                                                                         */
+                                                                                                                                uneti niz brojeva i niz imena a zatim ta dva niza sortirati
+                                                                                                                                 */
         var imena = prompt("Unesite imena za sortiranje:");
         var brojevi = prompt("Unesite brojeve za sortiranje:");
         ispisSortiranihImena(imena);
@@ -28,7 +28,9 @@
         function ispisSortiranihBrojeva(brojevi) {
             const nizBrojeva = brojevi.split(",");
             document.write('Niz brojeva pre sortiranja izgleda ovako: ' + nizBrojeva.join(';') + "<br>");
-            const sortiraniBrojevi = nizBrojeva.sort();
+            const sortiraniBrojevi = nizBrojeva.sort(function compare(a, b) {
+                return a - b
+            });
             document.write('Niz brojeva posle sortiranja izgleda ovako: ' + sortiraniBrojevi.join(';') + "<br>");
         }
     </script>
