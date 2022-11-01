@@ -16,7 +16,7 @@ for (automobil in automobili) {
     // console.log(automobili["bmw"]) // jos jedan nacin za pristup podatcima objekta gde ce ispisati podatke za bmw
     //Ili mozemo napisati takodje:
 
-    console.log(automobili.bmw);
+    // console.log(automobili.bmw);
 
 }
 
@@ -27,3 +27,7 @@ let osoba = {
     grad: "Peking"
 
 };
+
+//console.log(osoba.ime);
+
+console.log(`Ime:${osoba.ime}\nPrezime:${osoba.prezime}\nGodine:${osoba.godine}\nGrad:${osoba.grad}\n `);
