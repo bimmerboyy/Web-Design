@@ -36,8 +36,14 @@ recenica.remove(); //remove sluzi za brisanje elementa sa stranice
 //Kreiranje novog div elemena
 let noviEl = document.createElement("div");
 
-nociEl.classList = "novi-element";
+noviEl.classList = "novi-element"; //Dodajemo klasu
 
-document.appendChild(noviEl);
+let body = document.querySelector("body"); //Selektujemo body tag
+
+
+
+body.appendChild(noviEl); //Na kraju body taga dodajemo nas novi element
+
+noviEl.innerHTML = "<hr>Pozdrav!!!"; //Dodajemo HTML element i tekst    
 
 console.log(noviEl);
