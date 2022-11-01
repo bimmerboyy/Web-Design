@@ -4,12 +4,16 @@ let nekretnine = {
     plac: "30000"
 };
 
+//Ova funkcija izracunava mjesecnu ratu za nekretninu za oderdjeni broj godina
 function racunanjeMjesecneRate(godine, vrstaNekretnine, ) {
     let mjeseci = godine * 12;
     let rata = nekretnine[vrstaNekretnine] / mjeseci;
     rata = rata.toFixed(0);
 
-    console.log(rata);
+    console.log(`Mjesecna rata na ${vrstaNekretnine} iznosi ${rata} eura za ${godine} goidna\n`);
+
+
+
 
 }
 //Proracun za stan na 15 godina
