@@ -12,21 +12,22 @@
     <p>Rezultat naseg JS koda je</p>
     <script>
         /*
-                                                                                  Kreirati kalsu Student koja ima atribute ime,prezime,brojIndeksa,ocene
-                                                                                  metode:
-                                                                                  konstruktor sa argumrntima (i,p,bi)
-                                                                                  predstaviSe() - vraca prosek studenta
-                                                                                  */
+                                                                                                                                                                                                                          Kreirati kalsu Student koja ima atribute ime,prezime,brojIndeksa,ocene
+                                                                                                                                                                                                                          metode:
+                                                                                                                                                                                                                          konstruktor sa argumrntima (i,p,bi)
+                                                                                                                                                                                                                          predstaviSe() - vraca prosek studenta
+                                                                                                                                                                                                                          */
         class Student {
             constuctor(i, p, bi) {
-                this.ime = i;
+                this._ime = i;
                 this.prezime = p;
                 this.brojIndeksa = bi;
                 this.ocene = [];
             }
             predstaviSe() {
-                documen.write(`Moje ime je ${this.ime} i prezivam se ${this.prezime}, broj indeksa mi je  ${this.brojIndeksa}`);
+                documen.write(`Moje ime je ${this._ime} i prezivam se ${this.prezime}, broj indeksa mi je  ${this.brojIndeksa}`);
             }
+
             prosek() {
                 //I nacin
                 let s = 0;
@@ -34,7 +35,8 @@
                 let brojOcena = this.ocene.length;
                 for (let i = 0; i < brojOcena; i++) {
                     if (this.ocene[i] > 5 && this.ocene[i] <= 10) {
-                        s += Number(ocene[i]);
+                        s += Number(this.ocene[i]);
+
                         br++;
                     }
                 }
@@ -56,7 +58,48 @@
 
 
             }
+            set ime(value) {
+                this._ime = value;
+            }
+            get ime() {
+                return this._ime;
+            }
         }
+
+        const student1 = new Student("Nikola", "Matkovic", 123456);
+        student1.ime = "Nicolla";
+        const stringOcene = prompt("Unesite ocene za prvog studenta");
+        student1.ocene = stringOcene.split(' ');
+        student1.predstaviSe();
+        document.write(`<br>Prvi student ima prosek ${student1.prosek()}`);
+
+
+        const student2 = new Student("Amina", "Memisahovic", 123456);
+        stringOcene = prompt("Unesite ocene za drugog studenta");
+        student2.ocene = stringOcene.split(' ');
+        student2.predstaviSe();
+        document.write(`<br>Prvi student ima prosek ${student2.prosek()}`);
+
+
+        const student3 = new Student("", "Matkovic", 123456);
+        stringOcene = prompt("Unesite ocene za treceg studenta");
+        student3.ocene = stringOcene.split(' ');
+        student3.predstaviSe();
+        document.write(`<br>Prvi student ima prosek ${student3.prosek()}`);
+
+        // funkcija koja prihvata niz studenata koja vraca najveci prosek studenata
+        function najveciProsek(studenti) {
+            // let max = studenti[0].prosek();
+            // for (let i = 1; i < studenti.lenght; i++) {
+            //     if (studenti[i].prosek() > max) {
+            //         max = studenti[i].prosek();
+            //     }
+            // }
+            // return max;
+
+            return Math.max.apply(Math, studenti.map(Math, s => s.prosek()))
+        }
+        document.write(`Najveci prosek ${najveciProsek([student1,student2,student3])}`)
     </script>
 </body>
 
