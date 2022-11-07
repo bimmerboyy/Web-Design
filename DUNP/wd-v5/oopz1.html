@@ -12,11 +12,11 @@
     <p>Rezultat naseg JS koda je</p>
     <script>
         /*
-                                                                                                                                                                                                                                                          Kreirati kalsu Student koja ima atribute ime,prezime,brojIndeksa,ocene
-                                                                                                                                                                                                                                                          metode:
-                                                                                                                                                                                                                                                          konstruktor sa argumrntima (i,p,bi)
-                                                                                                                                                                                                                                                          predstaviSe() - vraca prosek studenta
-                                                                                                                                                                                                                                                          */
+         Kreirati kalsu Student koja ima atribute ime,prezime,brojIndeksa,ocene
+         metode:
+         konstruktor sa argumrntima (i,p,bi)
+         predstaviSe() - vraca prosek studenta
+         */
         class Student {
             constuctor(i, p, bi) {
                 this._ime = i;
@@ -101,6 +101,10 @@
         }
         document.write(`Najveci prosek ${najveciProsek([student1,student2,student3])}`)
 
+
+        //Nasledjivanje 
+
+
         class Krug {
             constructor(pp) {
                 this.r = pp;
@@ -126,6 +130,9 @@
                 return this.H * this.povrsinaKruga();
             }
         }
+        const v = new Valjak(2.5, 10.31);
+        document.write(`Povrsina valjka iznosi: ${v.povrsinaValjka()}`);
+        document.write(`Zapremina valjka iznosi: ${v.zapreminaValjka()}`);
     </script>
 </body>
 
