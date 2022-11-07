@@ -11,6 +11,35 @@
 <body>
     <p>Rezultat naseg JS koda je</p>
     <script>
+        /*
+                                          Kreirati kalsu Student koja ima atribute ime,prezime,brojIndeksa,ocene
+                                          metode:
+                                          konstruktor sa argumrntima (i,p,bi)
+                                          predstaviSe() - vraca prosek studenta
+                                          */
+        class Student {
+            constuctor(i, p, bi) {
+                this.ime = i;
+                this.prezime = p;
+                this.brojIndeksa = bi;
+                this.ocene = [];
+            }
+            predstaviSe() {
+                documen.write(`Moje ime je ${this.ime} i prezivam se ${this.prezime}, broj indeksa mi je  ${this.brojIndeksa}`);
+            }
+            prosek() {
+                let s = 0;
+                let br = 0;
+                let brojOcena = this.ocene.length;
+                for (let i = 0; i < brojOcena; i++) {
+                    if (this.ocene[i] > 5 && this.ocene[i] <= 10) {
+                        s += Number(ocene[i]);
+
+                    }
+                }
+                return s / brojOcena;
+            }
+        }
     </script>
 </body>
 
