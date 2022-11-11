@@ -12,11 +12,11 @@
     <p>Rezultat naseg JS koda je</p>
     <script>
         /*
-         Kreirati kalsu Student koja ima atribute ime,prezime,brojIndeksa,ocene
-         metode:
-         konstruktor sa argumrntima (i,p,bi)
-         predstaviSe() - vraca prosek studenta
-         */
+                 Kreirati kalsu Student koja ima atribute ime,prezime,brojIndeksa,ocene
+                 metode:
+                 konstruktor sa argumrntima (i,p,bi)
+                 predstaviSe() - vraca prosek studenta
+                 */
         class Student {
             constuctor(i, p, bi) {
                 this._ime = i;
@@ -130,6 +130,12 @@
                 return this.H * this.povrsinaKruga();
             }
         }
+        const k = new Krug(2.5);
+        k.prototype.x = 12;
+
+        // k.prototype.funkcijaNeka = function(x,y,z){
+        //     return x + y + z;
+        // }
         const v = new Valjak(2.5, 10.31);
         document.write(`Povrsina valjka iznosi: ${v.povrsinaValjka()}`);
         document.write(`Zapremina valjka iznosi: ${v.zapreminaValjka()}`);
