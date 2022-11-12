@@ -21,20 +21,41 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .to-do-list p {
-    font-size: 25px;
+    font-size: 30px;
     color: white;
     font-weight: bold;
 }
 
+input::placeholder {
+    font-size: 20px;
+}
+
 input {
-    width: 1000px;
-    height: 30px;
+    width: 900px;
+    height: 40px;
+    border: none;
 }
 
 .add-text {
     margin-bottom: 30px;
+    display: grid;
+    grid-template-columns: 900px 150px;
+}
+
+.add-btn {
+    padding: 8px 130px;
+    font-size: 17px;
+    color: rgb(94, 94, 94);
+    background-color: rgb(215, 214, 214);
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.add-btn:hover {
+    background-color: rgb(182, 182, 182);
 }
