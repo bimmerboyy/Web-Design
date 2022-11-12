@@ -14,13 +14,27 @@
     background-color: red;
     width: 1200px;
     padding-top: 100px;
-    padding-bottom: 40px;
+    padding-left: 50px;
 }
 
 .to-do-list {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 20px;
 }
 
-.to-do-list p {}
+.to-do-list p {
+    font-size: 25px;
+    color: white;
+    font-weight: bold;
+}
+
+input {
+    width: 1000px;
+    height: 30px;
+}
+
+.add-text {
+    margin-bottom: 30px;
+}
