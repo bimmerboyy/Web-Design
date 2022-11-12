@@ -3,18 +3,21 @@
     margin-bottom: 0;
 }
 
+:root {
+    --w: 1200px;
+}
+
 .main-div {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 300px;
+    flex-direction: column;
 }
 
 .header {
     background-color: red;
-    width: 1200px;
-    padding-top: 100px;
-    padding-left: 50px;
+    width: var(--w);
+    padding: 100px 50px;
 }
 
 .to-do-list {
@@ -58,4 +61,39 @@ input {
 
 .add-btn:hover {
     background-color: rgb(182, 182, 182);
+}
+
+
+/* Remove margins and padding from the list */
+
+#todo {
+    margin: 0;
+    padding: 0;
+    width: calc(var(--w) + 100px);
+}
+
+#todo>div {
+    cursor: pointer;
+    position: relative;
+    padding: 12px 8px 12px 40px;
+    background: #eee;
+    font-size: 2rem;
+    position: relative;
+}
+
+#todo>div:nth-child(odd) {
+    background: #f9f9f9;
+}
+
+#todo>div.finished {
+    background: #888;
+    color: #fff;
+    text-decoration: line-through;
+}
+
+.x {
+    position: absolute;
+    right: 50px;
+    top: 50%;
+    transform: translateY(-50%);
 }
