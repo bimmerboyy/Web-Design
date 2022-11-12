@@ -28,3 +28,5 @@ function isEven(x) {
 const output2 = arr.filter(isEven);
 
 console.log(output2);
+
+//reduce
