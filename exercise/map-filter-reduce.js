@@ -15,7 +15,7 @@ const output = arr.map(binary);
 
 // console.log(output);
 
-//filter odd numbers
+//filter odd numbers.
 
 function isOdd(x) {
     return x % 2;
