@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        document.write("Zadatak:U nizu godina,naci sve godine 21.veka");
+        //\d karakter koji se koristi u uzroku i predstavlja bilo koju cifru 0-9
+        x1 = /2\d\d\d/g
+        const y = "1880-olimpijada 1987 1993 1996-olimpijada 1998 1995 2002 2005 2006" + "2008-olimpijada"
+        y1 = y.match(x1);
+        document.write("<br> Metodom MATCH nad stringom,uzorak je pronadjen kod: <br>" + y1 + "</br>");
+        //y1 je niz ["2002", "2005","2006","2008","2008"]
+        //match metod vraca niz elemenata sa svim pojavljivanjima definsisanog uzroka
+        //ako je difinisan atribut g
+    </script>
+
+</body>
+
+</html>
