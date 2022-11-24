@@ -23,7 +23,7 @@
               }
               return s / duzina;
           }
-          //   prosek() {
+          // .  prosek() {
           //       let s = 0;
           //       this.ocene.forEach(ocena => {
           //           s += Number(ocene[i]);
