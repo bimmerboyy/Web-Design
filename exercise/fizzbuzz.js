@@ -3,6 +3,7 @@
 Иако ово последње може изгледати једноставно, чак и искусни програмери понекад погреше логику.*/
 
 //prvi nacin
+/*
 
 let niz = [];
 let fizz = "FIZZ";
@@ -23,3 +24,22 @@ for(let i = 1;i <= 100;i++){
 for(i = 0;i < 100;i++){
     console.log(niz[i]);
 }
+*/
+
+//drugi nacin
+
+let niz = [];
+
+for(let i = 1;i <= 100;i++){
+    if(i % 3 == 0){
+       niz[i].push("FIZZ");
+    }
+    else if(i % 5 == 0){
+        niz[i].push("BUZZ");
+
+    }
+    else{
+            niz[i] = i;
+        }
+}
+
