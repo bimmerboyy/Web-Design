@@ -2,11 +2,22 @@
 
 Иако ово последње може изгледати једноставно, чак и искусни програмери понекад погреше логику.*/
 
+//prvi nacin
+
 let niz = [];
 let fizz = "FIZZ";
 let buzz = "BUZZ";
-for(let i = 0;i < 100;i++){
-    niz[i] = i;
+for(let i = 1;i <= 100;i++){
+   if(i % 3 == 0){
+      niz[i] = fizz;
+   }
+   else if(i % 5 == 0){
+      niz[i] = buzz;
+   }
+   else{
+      niz[i] = i;
+   }
+    
     
 }
 for(i = 0;i < 100;i++){
