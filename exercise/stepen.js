@@ -3,10 +3,10 @@
 
 let stepen = (broj,eksponent) => {
     let pom = 1;
-    for(let i = 0; i < eksponent.length; i++) {
+    for(let i = 0; i < eksponent; i++) {
         pom *= broj;
     }
     return pom;
 };
 
-
+console.log(stepen(2,5));
