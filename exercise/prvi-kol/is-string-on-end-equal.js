@@ -8,7 +8,7 @@ na kraju onog drugog.Karakter * u stringovima menja bilo koji znak.
 let proveraKrajaStringova = (str1,str2) => {
     str1.reverse();
     str2.reverse();
-    for (let i = 0; i < str1.length;i++) {
+    for (let i = 0; i < str1.lenght;i++) {
         while(str1[i] === str2[i]){
             let prvaRec = str1[i];
             let drugaRec = str2[i];
