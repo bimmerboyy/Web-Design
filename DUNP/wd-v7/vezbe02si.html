@@ -27,6 +27,10 @@
             var pass = document.getElementById("pass").value;
             var uzorakIme = /^[A-Z]{1}\w{5,}$/; //Mora da pocinje velikim slovom i da ima 5 slova
             var uzorakPass = /^w{6,}$/; //min 6 cifra,slovo,_
+            if (uzorakIme.test(ime) && uzorakPass.test(pass))
+                alert("Ok je");
+            else
+                alert("Ne valja");
         }
     </script>
 
