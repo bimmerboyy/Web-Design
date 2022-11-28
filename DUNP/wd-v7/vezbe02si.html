@@ -25,7 +25,7 @@
         function provera(ime = "", prezime = "") {
             var ime = document.getElementById("ime").value;
             var pass = document.getElementById("pass").value;
-            var uzorakIme = /^[A-Z]$/; //Mora da pocinje velikim slovom i da ima 6 slova
+            var uzorakIme = /^[A-Z]{1}\w{5,}$/; //Mora da pocinje velikim slovom i da ima 6 slova
             var uzorakPass = /^w{6,}$/; //min 6 cifra,slovo,_
         }
     </script>
