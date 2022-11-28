@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+
+    <style>
+        .plavi {
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <p id="rezultat">Pocetni p tag</p>
+    <p class="plavi">Drugi paragraf</p>
+    <p class="plavi">Treci paragraf</p>
+
+    <script>
+        // const par = document.getElementById("rezultat");
+        // par.innerHTML = "Ovaj paragraf smo izmenili pomocu JS";
+        // const paragrafi = document.getElementsByTagName("p");
+        // for (let i = 0; i < paragrafi.lenght; i++) {
+        //     const par = paragrafi[i];
+        //     par.innerHTML = `Ovo je paragraf sa indeksom ${i}`;
+        // }
+        // paragrafi[0]?.classList.add("plavi");
+
+        const par = document.getElementById("rezultat");
+        par.innerHTML = "Ovaj paragraf smo izmenili pomocu JS";
+        const paragrafi = document.getElementsByClassName("plavi");
+        for (let i = 0; i < paragrafi.lenght; i++) {
+            const par = paragrafi[i];
+            par.innerHTML = `Ovo je plavi paragraf sa indeksom ${i}`;
+        }
+        const pa = document.querrySelectorAll("p.plavi");
+        for (let i = 0; i < pa.length; i++) {
+            pa[i].style.color = "red";
+
+        }
+    </script>
+</body>
+
+</html>
