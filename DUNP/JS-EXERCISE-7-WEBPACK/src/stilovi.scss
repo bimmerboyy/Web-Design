@@ -1,0 +1,12 @@
+$osnovna_boja: #12FC31;
+body {
+    background-color: rgb(147, 13, 147);
+}
+
+nesto {
+    color: aqua;
+}
+
+div#blabla {
+    background-color: $osnovna_boja;
+}
