@@ -17,9 +17,16 @@
         <label>Ime</label>
         <input type="text" id="ime">
         <label>Sifra</label>
-        <input type="text" id="pass">
+        <input type="password" id="pass">
     </form>
-    <button oneclick="provera()">Proveri</button>
+    <button oneclick="provera('ime','prezime')">Proveri</button>
+
+    <script>
+        function provera(ime = "", prezime = "") {
+            var ime = document.getElementById("ime").value;
+            var pass = document.getElementById("pass").value;
+        }
+    </script>
 
 </body>
 
