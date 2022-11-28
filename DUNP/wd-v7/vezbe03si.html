@@ -45,6 +45,28 @@
         thPrezime.innerHTML = "Prezime";
         const thProsek = document.createElement("th");
         thProsek.innerHTML = "Prosek";
+        trZaglavlje.appendChild(thIme);
+        trZaglavlje.appendChild(thPrezime);
+        trZaglavlje.appendChild(thProsek);
+        tabela.appendChild(trZaglavlje);
+        tabela.style.border = "1px solid black";
+        const divContainer = document.getElementById("tabela");
+        divContainer.appendChild(tabela);
+
+        for (let i = 0; i < studenti.length; i++) {
+            const trPodaci = document.createElement("tr");
+            const td1 = document.createElement("td");
+            td1.innerHTML = studenti[i].ime;
+            const td2 = document.createElement("td");
+            td2.innerHTML = studenti[i].prezime;
+            const td3 = document.createElement("td");
+            td3.innerHTML = studenti[i].prosek;
+            trPodaci.appendChild(td1);
+            trPodaci.appendChild(td2);
+            trPodaci.appendChild(td1);
+            tabela.appendChild(trPodaci);
+
+        }
     </script>
 
 </body>
