@@ -5,21 +5,16 @@ na kraju onog drugog.Karakter * u stringovima menja bilo koji znak.
 
 //Npr 
 
-let proveraKrajaStringova = (str1,str2) => {
-    str1.reverse();
-    str2.reverse();
-    for (let i = 0; i < str1.lenght;i++) {
-        while(str1[i] === str2[i]){
-            let prvaRec = str1[i];
-            let drugaRec = str2[i];
-        }
-        if(prvaRec === drugaRec) {
-            return true;
-        }
-        else{
+let proveraKrajaStringova = (prviString,drugiString) => {
+   prviString = prviString.split("").reverse().join("");
+   drugiString = drugiString.split("").reverse().join("");
+
+    for (let i = 0; i < drugiString.length;i++) {
+       if(prviString[i] !== drugiString[i] && prviString[i] !== "*" && drugiString[i] !== "*") {
             return false;
         }
     }
+    return true;
 };
 
-console.log(proveraKrajaStringova("prvitim","drugitim"));
+console.log(proveraKrajaStringova("prvitim","tim"));
