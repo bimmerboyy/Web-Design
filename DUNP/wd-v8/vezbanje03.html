@@ -12,6 +12,10 @@
     <input type="text" id="telefon">
     <script>
         var tel = document.getElementById("telefon");
+        tel.addEventListener("keydown", event => {
+            if (event.key < "0" && event.key > "9")
+                console.log("Uneta vrednost nije broj");
+        });
     </script>
 
 </body>
