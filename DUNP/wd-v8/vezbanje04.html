@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label for="rez">Najniza ocena 5</label>
+    <input type="range" min="1" max="10" value="5"> onmousemove ="promeni(this)"
+    <table id="tabela" border="1px solid black">
+        <!--10 studenata sa radndom vrednsti od 1 do 10 za ocenu ime korisnik unosi sa standardnog ulaza
+        preko promta-->
+    </table>
+    <script>
+        let nizStudenata = prompt("Unesite niz studenata");
+
+        generisiStudente(); // generise niz 10 studenata sa nasumicnim ocenama
+        popuniTabelu(); // treba da generise tabelu pomocu prethodno kreiran studen
+
+        // let generisiStudente = nizStudenata => {
+        //     let niz = createElement("div");
+        //     niz.innerHTML = [nizStudenata.split(",")];
+        //     let ocene = createElement("div");
+        //     let randomOcene = getElementByTagName("input");
+        //     ocene.innerHTML = randomOcene.value;
+
+
+        // };
+    </script>
+
+</body>
+
+</html>
