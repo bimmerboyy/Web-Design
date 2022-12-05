@@ -18,8 +18,59 @@
     <script>
         let nizStudenata = prompt("Unesite niz studenata");
 
-        generisiStudente(); // generise niz 10 studenata sa nasumicnim ocenama
-        popuniTabelu(); // treba da generise tabelu pomocu prethodno kreiran studen
+        function generisiStudente() {
+            const niz = [];
+            for (let i = 0; i < 10; i++) {
+                const ocena = Math.floor(Math.random() * 10) + 1;
+                const ime = prompt("Unsite ime studenta");
+                const obj = {
+                    ime: ime,
+                    ocena: ocena,
+                };
+                niz.push(obj);
+            }
+            return niz;
+        } // generise niz 10 studenata sa nasumicnim ocenama
+        function popuniTabelu() {
+            const tabela = document.querySelector("#tabela");
+            const trHead = document.querySelector("#tr");
+            const thIme = document.querySelector("#thime");
+            thIme.innerHTML = "Ime";
+            const thOcena = document.querySelector("#th");
+            thOcena.innerHTML = "Ocena";
+            trHead.appendChild(thIme);
+            trHead.appendChild(thOcena);
+            tabela.appendChild(trHead);
+
+            for (let i = 0; i < niz.lenght; i++) {
+                if (nizStudenata[i].ocena >= minOcena) {
+                    const trBody = document.createElement("tr");
+                    const thIme = document.createElement("td");
+                    thIme.innerHTML = nizStudenata[i].ime;
+                    const thOcena = document.createElement("td");
+                    thOcena.innerHTML = nizStudenata[i].ocena;
+                    trBody.appendChild(tdIme);
+                    trBody.appendChild(tdOcena);
+                    tabela.appendChild(trBody);
+                }
+
+            }
+        } // treba da generise tabelu pomocu prethodno kreiran studen
+        generisiStudente();
+        popuniTabelu(minOcena);
+
+        function promeni(obj) {
+            document.getElementById("rez").innerHTML = "Najniza cena" + obj.value;
+            ocistiTabelu();
+            popuniTabelu();
+        }
+
+        function ocistiTabelu() {
+            const tabela = document.getElementById("tabela");
+            while (tabela.firstChild) {
+                tabela.removeChild(firstChild);
+            }
+        }
 
         // let generisiStudente = nizStudenata => {
         //     let niz = createElement("div");
