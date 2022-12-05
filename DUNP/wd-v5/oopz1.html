@@ -25,7 +25,7 @@
                 this.ocene = [];
             }
             predstaviSe() {
-                documen.write(`Moje ime je ${this._ime} i prezivam se ${this.prezime}, broj indeksa mi je  ${this.brojIndeksa}`);
+                document.write(`Moje ime je ${this._ime} i prezivam se ${this.prezime}, broj indeksa mi je  ${this.brojIndeksa}`);
             }
 
             prosek() {
@@ -58,6 +58,7 @@
 
 
             }
+        
             set ime(value) {
                 this._ime = value;
             }
@@ -97,7 +98,7 @@
             // }
             // return max;
 
-            return Math.max.apply(Math, studenti.map(Math, s => s.prosek()))
+            return Math.max(...studenti.map(s => s.prosek()));
         }
         document.write(`Najveci prosek ${najveciProsek([student1,student2,student3])}`)
 
