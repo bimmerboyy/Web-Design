@@ -9,10 +9,20 @@
 </head>
 
 <body>
-    <h1 id="heading">Dobrodosli na nas sajt,kliknite na naslov</h1>
-    <p id="para">Kliknite i ovde da vdidite razliku</p>
+    <h1 id="heading" ondblclick="ispis3()" onclick="ispis1()">Dobrodosli na nas sajt,kliknite na naslov
+        <p id="para" onclick="ispis2()">Kliknite i ovde da vdidite razliku</p>
+    </h1>
 
     <script>
+        const ispis1 = () => {
+            console.log("Kliknuli ste na header");
+        }
+        const ispis2 = () => {
+            console.log("Kliknuli ste na paragraf");
+        }
+        const ispis3 = () => {
+            console.log("Dupli klik na hader");
+        }
     </script>
 
 </body>
