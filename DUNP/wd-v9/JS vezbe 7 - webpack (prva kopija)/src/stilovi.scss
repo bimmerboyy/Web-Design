@@ -1,0 +1,13 @@
+$osnovna_boja: #12FC31;
+
+
+body{
+    background: purple;
+}
+.nesto{
+    color: $osnovna_boja;
+}
+
+div#blabla{
+    background: $osnovna_boja;
+}
