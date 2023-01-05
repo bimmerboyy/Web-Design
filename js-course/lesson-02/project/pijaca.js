@@ -17,7 +17,7 @@ function addToCart(element) {
 
         cartItems.innerHTML += `<div class="cart-single-item">
             <h3>${name}</h3>
-            <p>$${price} x ${quantity} = $${total}</p>
+            <p>$${price} x ${quantity} = $<span>${total}</span></p>
             <button onclick="removeFromCart(this)" class="remove-item">Ukloni</button>
 
         </div>`;
@@ -35,5 +35,6 @@ function addToCart(element) {
 }
 
 function removeFromCart(element) {
-    console.log("removing from cart");
+    let mainEl = element.closest(".cart-single-item");
+    mainEl.remove();
 }
