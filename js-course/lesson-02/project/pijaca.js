@@ -1,3 +1,5 @@
+let allTotal = 0;
+
 function addToCart(element) {
     let mainEl = element.closest(".single-item");
     let input = element.previousElementSibling;
@@ -11,12 +13,16 @@ function addToCart(element) {
         price = parseInt(price);
         let total = price * parseInt(quantity);
 
+        allTotal += total;
 
         cartItems.innerHTML += `<div class="cart-single-item">
             <h3>${name}</h3>
             <p>$${price} x ${quantity} = $${total}</p>
+            <button onclick="removeFromCart(this)" class="remove-item">Ukloni</button>
 
-        </div>`
+        </div>`;
+
+        document.querySelector(".total").innerText = `Total: ${allTotal}`;
 
 
         element.innerText = "Dodato";
@@ -25,11 +31,9 @@ function addToCart(element) {
     } else {
         alert("Odaberi kolicinu")
     }
-
-
-
-
-
-
     console.log(quantity);
+}
+
+function removeFromCart(element) {
+    console.log("removing from cart");
 }
