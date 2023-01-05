@@ -10,7 +10,14 @@ function validacija() {
 
 
         if (izmedjuAtTacka.length > 0) {
-            console.log("Dobro je");
+            let prijeAt = value.substring(0, pozicijaAt);
+            if (prijeAt.length > 2) {
+                let posleTacke = value.substring(pozicijaTacka + 1, value.length);
+                console.log(posleTacke);
+            } else {
+                console.log("Mejl nije validan");
+            }
+
         } else {
             console.log("Nije dobro");
         }
