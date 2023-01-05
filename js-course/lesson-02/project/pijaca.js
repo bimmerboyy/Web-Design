@@ -8,5 +8,8 @@ function addToCart(element) {
 
     cartItems.innerHTML = "Dodato " + name;
 
+
+
+
     console.log(quantity);
 }
