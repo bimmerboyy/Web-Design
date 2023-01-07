@@ -104,3 +104,28 @@ body {
 .gledaj:hover {
     background-color: rgb(74, 74, 74);
 }
+
+.all-films {
+    background-color: rgb(50, 50, 50);
+    display: inline-block;
+    margin-top: 100px;
+    padding: 30px;
+    width: 300px;
+}
+
+.wached-films {
+    width: 100px;
+}
+
+.chart {
+    margin-bottom: 20px;
+}
+
+.first {
+    display: flex;
+    justify-content: space-between;
+}
+
+.total {
+    margin-top: 40px;
+}
