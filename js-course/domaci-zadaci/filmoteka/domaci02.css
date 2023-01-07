@@ -127,10 +127,18 @@ body {
 }
 
 .first {
+    width: 300px;
     display: flex;
     justify-content: space-between;
+    margin-bottom: 20px;
 }
+
+.name-of-film {}
 
 .total {
     margin-top: 40px;
+}
+
+.first button {
+    color: black;
 }
