@@ -9,34 +9,38 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 100px;
 }
 
 .main-div {
     background-color: rgb(74, 74, 74);
     width: 100%;
-    padding: 30px;
-    padding-left: 200px;
+    padding-bottom: 70px;
 }
 
 .grid-cards {
     display: grid;
     grid-template-columns: 300px 300px 300px 300px;
     column-gap: 100px;
+    margin-top: 70px;
+    padding: 30px;
+    padding-left: 200px;
 }
 
 .header {
-    background-color: rgb(74, 74, 74);
+    background-color: rgb(58, 58, 58);
     display: flex;
     justify-content: center;
     align-items: center;
     height: 10px;
     margin-bottom: 20px;
-    margin-top: 20px;
+    height: 50px;
 }
 
 .header p {
     color: #f90;
+    font-weight: bold;
+    font-size: 20px;
+    margin-right: 100px;
 }
 
 .card h3 {
@@ -111,6 +115,7 @@ body {
     margin-top: 100px;
     padding: 30px;
     width: 300px;
+    margin-left: 50px;
 }
 
 .wached-films {
