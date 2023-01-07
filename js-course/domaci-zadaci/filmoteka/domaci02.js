@@ -12,7 +12,7 @@ function watchMovie(element) {
     chart.innerHTML += `<div class="first">
         <p class="name-of-film">${name}</p>
         <p class="price-of-film">$${price}</p>
-        <button onclick="">Ukloni</button>
+        <button onclick="removeFromCart">Ukloni</button>
         </div>
         `;
     let total = document.querySelector(".total p span");
