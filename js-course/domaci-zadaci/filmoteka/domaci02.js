@@ -1,7 +1,28 @@
-function watchMovie() {
-    console.log("Radi");
-}
 let trenutniBroj = 0;
+let allTotal = 0;
+
+function watchMovie(element) {
+    let mainEl = element.closest(".card");
+    let price = mainEl.querySelector(".price span").innerText;
+    price = parseInt(price);
+    element.innerText = "Odgledato";
+    element.setAttribute("disabled", "disabled");
+    let name = mainEl.querySelector("h3").innerText;
+    let chart = document.querySelector(".wached-films");
+    chart.innerHTML += `<div class="first">
+        <p class="name-of-film">${name}</p>
+        <p class="price-of-film">$${price}</p>
+        <button onclick="">Ukloni</button>
+        </div>
+        `;
+    let total = document.querySelector(".total p span");
+    allTotal += price;
+    total.innerHTML = allTotal + "$";
+
+
+
+}
+
 
 
 
