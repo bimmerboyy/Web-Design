@@ -24,4 +24,32 @@ link.addEventListener("click", (event) => {
 let form = document.querySelector("form");
 form.addEventListener("submit", (event) => {
     event.preventDefault();
+
+});
+
+let opcije = document.querySelector("select");
+
+opcije.addEventListener("change", (event) => {
+    console.log(event.target.value);
+});
+
+window.addEventListener("resize", (event) => {
+    if (window.innerWidth > 1000) {
+        console.log("prozor veci od 1000")
+    } else {
+        console.log("Porzor manji od 1000");
+    }
+});
+
+let input = document.querySelector("input");
+
+input.addEventListener("keydown", (event) => {
+    if (event.key === "Backspace") {
+        alert("Obrisao si nesto")
+
+    }
+});
+
+input.addEventListener("mousemove", (event) => {
+    console.log("Mis pomjeren");
 });
