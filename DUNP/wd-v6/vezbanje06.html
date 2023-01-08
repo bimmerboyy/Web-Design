@@ -26,7 +26,7 @@
 
             var tekst = prompt("Unesite broj telefona");
             if (tel.test(tekst)) // tekst.match(tel) test vraca true ako rezultat nije null; za razliku od match metode, test se primenjuje
-            { // nad objektom uzorka, a argument je string koji se proverava
+            { // nad objektom uzorka, a argument je string koji se proverava.
                 var rezultat = tekst.match(/\d+/g);
                 var i = 0;
                 var novirez = "";
