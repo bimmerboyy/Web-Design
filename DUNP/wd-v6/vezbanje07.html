@@ -1,0 +1,60 @@
+<html>
+
+<head>
+    <title>DatumVreme</title>
+    <script language="javascript">
+        function provera() {
+            var poruka = "";
+            if (ProveriDatum(prompt("Unesite datum"))) {
+                poruka += "Datum je ok. \n";
+            } else {
+                poruka += "Datum nije korektno unesen. \n";
+            }
+            if (ProveriVreme(prompt("Unesite vreme")))
+                poruka += "Vreme je ok. \n";
+            else
+                poruka += "Vreme nije korektno uneseno. \n";
+            alert(poruka);
+        }
+
+        function ProveriDatum(date) {
+            var provera = /^([1-2][0-9]|[3][0-1]|[1-9]|[0][1-9])\.([0][1-9]|[1][0-2]|[1-9])\.([0-9]{4})\.$/;
+
+            if (provera.test(date)) {
+                var niz = date.split("."); // split deli string na niz podstringova koji su u originalnom stringu razdvojeni separatorom 
+                var dan = parseInt(niz[0], 10);
+                var mesec = parseInt(niz[1], 10);
+                var godina = parseInt(niz[2], 10);
+
+                if (mesec == 2) {
+                    if (((godina % 4 == 0) && (godina % 100 != 0)) || (godina % 400 == 0)) {
+                        if (dan > 29) return false;
+                    } else {
+                        if (dan > 28) return false;
+                    }
+
+                } else {
+                    if ((dan > 30) && ((mesec == 4) || (mesec == 6) || (mesec == 9) || (mesec == 11)))
+                        return false;
+                }
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        function ProveriVreme(vreme) {
+            var provera = /^([0-1][0-9]|[0-9]|[2][0-3]):([0-5][0-9]|[0-9])$/;
+            // za sat je korektno da se unese: 01, 1, 19... a za minut: 09, 0, 49...
+
+            return provera.test(vreme);
+        }
+        provera();
+    </script>
+</head>
+
+<body>
+    <p> Hello </p>
+</body>
+
+</html>
