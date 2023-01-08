@@ -17,7 +17,26 @@
         const y1 = y.replace(x1, "JAVA");
         document.write("Metodom REPLACE pronadjen je uzorak  HTML u JAVA  pa string i izgleda ovako: " + y1);
         //replace metod ispituje da li u stringu postoji uzorak i ako postoji zameni ga
-        //,etod ima dva argumenta,prvi je uzorak, a drugi je string koji treba.
+        //,etod ima dva argumenta,prvi je uzorak, a drugi je string koji treba da zameni uzorak.
+
+
+        document.write("<br>");
+
+        x2 = /HTML/g // g - globalna primena - vrsi se zamena svakog uzorka koji se nadje u okviru stringa
+        y21 = "html: HTML ili HyperText Markup Language. HTML se uci na VD." +
+            " HtmL je jednostavan jezik";
+        y2 = y21.replace(x2, "JAVA");
+        document.write("<br>Upotrebom atributa i nad uzorkom, string izgleda ovako:<br>" +
+            y2);
+
+        document.write("<br>");
+
+        x3 = /HTML/gi // gi - globalna primena, case insensitive 
+        y31 = "html: HTML ili HyperText Markup Language. HTML se uci na VD. " +
+            "HtmL je jednostavan jezik";
+        y3 = y31.replace(x3, "JAVA");
+        document.write("<br>Upotrebom atributa ig nad uzorkom, string izgleda ovako:<br>" +
+            y3);
     </script>
 
 </body>
