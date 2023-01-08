@@ -1,0 +1,43 @@
+<html>
+
+<head>
+    <title>email</title>
+
+    <script language="javascript">
+        function proveri() {
+            /* karakteri koji se koriste u uzorku: 
+            \d bilo koja cifra [0-9]                     
+            \w neki od karaktera (mala, velika slova, brojevi, _)
+            \D bilo koji karakter koji nije cifra        alfanumericki znak sebe predstavlja
+            . bilo koji karakter osim nove linije        [...]  bilo koji karakter naveden izmedju []
+            [^...] bilo koji karakter koji nije naveden izmedju   {n, m} prethodni element se ponavlja najmanje n i ne vise od m puta
+            {n, } prethodni element se ponavlja n ili vise puta  {n} prethodni element se ponavlja tacno n puta 
+            ? prethodni element se ne pojavljuje ili se pojavljuje jednom   
+            + prethodni element se ponavlja jednom ili vise puta
+            * prethodni element se ne pojavljuje ili se pojavljuje vise puta
+            | alternativa, pojavljuje se samo levi ili desni deo uzorka u stringu
+            (...)grupisanje simbola u jedan objekat nad kojim se mogu koristiti ? * + |
+            ^ pretraga uzorka na pocetku znakovnog niza
+            $ pretraga uzorka na kraju znakovnog niza
+            */
+            var test = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            // na pocetku stringa se moze naci jedno ili vise slova izmedju kojih je moguca pojava . ili - ali mora slediti slovo posle toga
+            // zatim se mora pojaviti @ iza koga se opet mogu naci jedno ili vise slova -||- 
+            // na kraju stringa se mora naci . pracena sa 2 ili 3 slova i takvi delovi se mogu vise puta ponavljati (npr. @etf.bg.ac.rs) 
+            var tekst = prompt("Unesite e-mail adresu za proveru");
+            console.log(tekst);
+            var rezultat = tekst.match(test); // vraca element u kome se pojavljuje definisan uzorak 
+            if (rezultat != null)
+                alert("Uneli ste ispravan mail");
+            else alert("Doslo je do greske prilikom unosa e-mail adrese");
+        }
+
+        proveri();
+    </script>
+</head>
+
+<body>
+    <p> hello </p>
+</body>
+
+</html>
