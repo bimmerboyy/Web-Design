@@ -17,6 +17,20 @@ function unesiBroj() {
     }
 }
 
-
+function unesiKorisnickoIme() {
+    let name = prompt("Unesi korisnicko ime");
+    try {
+        if (name == "") {
+            throw ("Unet je prazan string");
+        }
+        if (name.length < 6) {
+            throw ("Ime mora da ima najmanje 6 karaktera");
+        }
+    } catch (err) {
+        console.log("Error: " + err);
+    }
+}
 
 // unesiBroj();
+
+unesiKorisnickoIme();
