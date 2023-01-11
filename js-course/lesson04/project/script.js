@@ -58,3 +58,26 @@ const displayNone = () => {
         img.style.display = "none";
     });
 }
+
+//Portfolio
+
+const portfolioSort = (button) => {
+    let category = button.getAttribute("data-category");
+    let portfolioItems = document.querySelectorAll(".portfolio-single-item");
+
+    portfolioItems.forEach((item) => {
+        item.style.display = "none";
+    });
+    if (category === "sve") {
+        portfolioItems.forEach((item) => {
+            item.style.display = "block";
+        });
+    }
+
+    portfolioItems.forEach((item) => {
+        console.log(item.getAttribute("data-category"));
+        if (item.getAttribute("data-category").includes(category)) {
+            item.style.display = "block";
+        }
+    });
+}
