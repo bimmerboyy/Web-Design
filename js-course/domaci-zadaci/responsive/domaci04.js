@@ -1,3 +1,7 @@
+//Sve sto je onclick preaciti u event listener
+//U portfolio dodati jos dvije kategorije i par itema za te kategorije
+//pored modal buttona napraviti jos jedan button i jos jedan modal drugaciji sa drugacijim sadrzajem
+
 //Ovo je responsive menu
 
 const mobileMenu = () => {
@@ -13,6 +17,9 @@ const mobileMenu = () => {
 
     }
 }
+
+let menuBtn = document.querySelector(".menu-btn");
+menuBtn.addEventListener("click", mobileMenu);
 
 
 //Ovo je galerija
