@@ -81,3 +81,21 @@ const portfolioSort = (button) => {
         }
     });
 }
+
+//Otvaramo modal
+
+const openModal = () => {
+    let modalWindow = document.querySelector(".popup-modal");
+    let overlay = document.querySelector(".overlay");
+    modalWindow.style.display = "block";
+    overlay.style.display = "block";
+}
+
+//Zatvaramo modal
+const closeModal = () => {
+    let modalWindow = document.querySelector(".popup-modal");
+    let overlay = document.querySelector(".overlay");
+    modalWindow.style.display = "none";
+    overlay.style.display = "none";
+
+}
