@@ -89,7 +89,20 @@ const portfolioSort = (button) => {
     });
 }
 
+const portfolioCategories = document.querySelectorAll(".portfolio-categories button");
+portfolioCategories.forEach((button) => {
+    button.addEventListener("click", () => {
+        portfolioSort(button);
+    });
+});
+
+
+
+
+
 //Otvaramo modal
+
+let modalBtn = document.querySelector(".modal-btn");
 
 const openModal = () => {
     let modalWindow = document.querySelector(".popup-modal");
@@ -97,6 +110,9 @@ const openModal = () => {
     modalWindow.style.display = "block";
     overlay.style.display = "block";
 }
+modalBtn.addEventListener("click", openModal);
+
+
 
 //Zatvaramo modal
 const closeModal = () => {
@@ -106,3 +122,7 @@ const closeModal = () => {
     overlay.style.display = "none";
 
 }
+
+let closeModalBtn = document.querySelector("#closeModal");
+console.log(closeModalBtn);
+closeModalBtn.addEventListener("click", closeModal);
