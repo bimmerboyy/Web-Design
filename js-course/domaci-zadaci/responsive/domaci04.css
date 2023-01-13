@@ -199,6 +199,30 @@ h3 {
     background-color: tan;
 }
 
+.yellow {
+    background-color: yellow;
+}
+
+.red {
+    background-color: red;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.light-blue {
+    background-color: lightblue;
+}
+
+.green {
+    background-color: green;
+}
+
+.gray {
+    background-color: gray;
+}
+
 
 /*
  * MODAL
@@ -255,4 +279,11 @@ h3 {
     height: 100%;
     z-index: 100;
     background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-buttons {
+    display: flex;
+    width: 1000px;
+    position: relative;
+    left: 400px;
 }

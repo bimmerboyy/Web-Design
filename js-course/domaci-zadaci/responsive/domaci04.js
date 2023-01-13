@@ -126,3 +126,6 @@ const closeModal = () => {
 let closeModalBtn = document.querySelector("#closeModal");
 console.log(closeModalBtn);
 closeModalBtn.addEventListener("click", closeModal);
+
+let secondModal = document.querySelector("#secondModal");
+secondModal.addEventListener("click", closeModal);
