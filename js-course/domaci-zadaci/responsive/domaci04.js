@@ -103,6 +103,7 @@ portfolioCategories.forEach((button) => {
 //Otvaramo modal
 
 let modalBtn = document.querySelector(".modal-btn");
+let secondModalBtn = document.querySelector(".second-modal-btn");
 
 const openModal = () => {
     let modalWindow = document.querySelector(".popup-modal");
@@ -110,7 +111,15 @@ const openModal = () => {
     modalWindow.style.display = "block";
     overlay.style.display = "block";
 }
+
+const openSecondModal = () => {
+    let modalWindow = document.querySelector(".second-popup-modal");
+    let overlay = document.querySelector(".overlay");
+    modalWindow.style.display = "block";
+    overlay.style.display = "block";
+}
 modalBtn.addEventListener("click", openModal);
+secondModalBtn.addEventListener("click", openSecondModal);
 
 
 
@@ -123,9 +132,17 @@ const closeModal = () => {
 
 }
 
+const closeSecondModal = () => {
+    let modalWindow = document.querySelector(".second-popup-modal");
+    let overlay = document.querySelector(".overlay");
+    modalWindow.style.display = "none";
+    overlay.style.display = "none";
+
+}
+
 let closeModalBtn = document.querySelector("#closeModal");
 console.log(closeModalBtn);
 closeModalBtn.addEventListener("click", closeModal);
 
-let secondModal = document.querySelector("#secondModal");
-secondModal.addEventListener("click", closeModal);
+let secondCloseModal = document.querySelector("#secondCloseModal");
+secondCloseModal.addEventListener("click", closeSecondModal);

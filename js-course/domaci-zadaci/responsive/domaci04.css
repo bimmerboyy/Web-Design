@@ -257,7 +257,31 @@ h3 {
     background-color: #fff;
 }
 
+.second-popup-modal {
+    display: none;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 25%;
+    z-index: 200;
+    max-width: 600px;
+    padding: 30px;
+    margin: auto;
+    background-color: #fff;
+}
+
 .popup-modal button {
+    font-size: 26px;
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background-color: transparent;
+    font-weight: bold;
+    border: 0;
+}
+
+.second-popup-modal button {
     font-size: 26px;
     cursor: pointer;
     position: absolute;
