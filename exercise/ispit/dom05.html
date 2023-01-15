@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+
+<body>
+
+    <input type="text" id="ime" onkeydown="ispis(this)" />
+    <label id="rez"></label>
+    <script>
+        function ispis(obj) {
+            var txt = document.getElementById("ime").value;
+            document.getElementById("rez").innerHTML = txt.length;
+        }
+    </script>
+</body>
+
+</html>
