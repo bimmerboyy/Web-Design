@@ -11,8 +11,8 @@ let filpCard = () => {
     let cards = document.querySelectorAll('.card');
     let removeImage = document.querySelectorAll('.card img');
     removeImage.forEach((images, index) => {
-        images.src = "";
-        images.alt = index;
+        images.parentNode.removeChild(images);
+
 
     });
     cards.forEach(card => {
@@ -25,8 +25,59 @@ let filpCard = () => {
 let addRandomNumber = () => {
     let cards = document.querySelectorAll('.card');
     let characters = 'abcdefghijklmnopqrstuvwxyz';
-    for (let i = 0; i < 8; i++) {
 
-    }
+    cards.forEach(card => {
+        let p = document.createElement('p');
+        for (let i = 0; i < 8; i++) {
+
+            p.innerHTML += characters.charAt(Math.floor(Math.random() * characters.length));
+            card.appendChild(p);
+
+        }
+
+
+    });
 
 };
+
+
+
+
+
+
+// let parent = document.querySelector('.grid-cards');
+// parent.addEventListener('click', addFunctions, false);
+
+// function addFunctions(e) {
+//     if (e.target !== e.currentTarget) {
+//         let clickedCard = e.target.id;
+//         console.log(clickedCard);
+
+
+//     }
+//     e.stopPropagation();
+// };
+
+
+
+
+
+// let cardArray = Array.from(cards);
+// console.log(cardArray);
+
+// cards.forEach((card, index) => {
+//     card.addEventListener('click', event => {
+//         let clickedCard = event.currentTarget;
+//         console.log(clickedCard);
+//         let indexOfClickedCard = cardArray.indexOf(clickedCard);
+//         if (indexOfClickedCard === index) {
+
+//         }
+
+//     });
+
+
+
+
+
+// });
