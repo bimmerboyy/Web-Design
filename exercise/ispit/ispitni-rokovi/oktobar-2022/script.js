@@ -18,8 +18,6 @@ let filpCard = () => {
     cards.forEach(card => {
         card.style.border = "1px solid black";
     });
-
-
 };
 
 let addRandomNumber = () => {
@@ -60,24 +58,26 @@ let addRandomNumber = () => {
 
 
 
-
+let cards = document.querySelectorAll('.card');
 
 // let cardArray = Array.from(cards);
 // console.log(cardArray);
 
-// cards.forEach((card, index) => {
-//     card.addEventListener('click', event => {
-//         let clickedCard = event.currentTarget;
-//         console.log(clickedCard);
-//         let indexOfClickedCard = cardArray.indexOf(clickedCard);
-//         if (indexOfClickedCard === index) {
+cards.forEach((card, index) => {
+    card.addEventListener('click', event => {
+        // let clickedCard = event.currentTarget;
+        // console.log(clickedCard);
+        // let indexOfClickedCard = cardArray.indexOf(clickedCard);
+        // if (indexOfClickedCard === index) {
 
-//         }
+        // }
+        filpCard();
+        addRandomNumber();
 
-//     });
+    });
 
 
 
 
 
-// });
+});
