@@ -16,10 +16,17 @@ let filpCard = () => {
 
     });
     cards.forEach(card => {
-
+        card.style.border = "1px solid black";
     });
 
 
 };
 
-filpCard();
+let addRandomNumber = () => {
+    let cards = document.querySelectorAll('.card');
+    let characters = 'abcdefghijklmnopqrstuvwxyz';
+    for (let i = 0; i < 8; i++) {
+
+    }
+
+};
