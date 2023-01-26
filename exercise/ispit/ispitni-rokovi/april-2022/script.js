@@ -40,24 +40,20 @@ dodaj.addEventListener('click', () => {
     ime = inputValue;
     if (ime === "") {
         alert("Unesite korisnicko ime");
-
     }
     nizImena.push(ime);
     for (let i = 0; i < nizImena.length; i++) {
         if (nizImena[i] === nizImena[i + 1]) {
             alert("Korisnicko ime je vec uneto");
-            ime.pop();
-
+            nizImena.pop();
         }
         if (i > 4) {
             alert("Nije vise moguce uneti igraca");
             dodaj.disabled = true;
             igra.style.pointerEvents = "all";
-            rezultati.style.pointerEvents = "none";
-
+            rezultati.style.pointerEvents = "all";
         }
     }
-
     let validacijaImena = /^([a-z]+[\d]+)$/
     let provera = ime.match(validacijaImena);
     if (provera != null) {
@@ -65,5 +61,36 @@ dodaj.addEventListener('click', () => {
     } else {
         alert("Korisnicko ime nije ispravno");
     }
+
+    if (localStorage.getItem('data') == null) {
+        localStorage.setItem('data', '[]');
+    }
+
+    let newData = inputValue;
+    if (newData == "") {
+        oldData.pop();
+    }
+    let oldData = JSON.parse(localStorage.getItem('data'));
+    oldData.push(newData);
+    localStorage.setItem('data', JSON.stringify(oldData));
+    for (let i = 0; i < oldData.length; i++) {
+        if (oldData[i] === oldData[i + 1]) {
+            oldData.splice(i, 1);
+            localStorage.setItem('oldData', JSON.stringify(oldData));
+            let igrac = localStorage.getItem('oldData', JSON.stringify(oldData));
+            igrac.pop();
+            localStorage.setItem('igrac', JSON.stringify(igrac));
+        }
+    }
+
+});
+
+let reset = document.querySelector('#reset');
+
+reset.addEventListener('click', () => {
+    nizImena.splice(0, nizImena.length);
+    dodaj.disabled = false;
+    igra.style.pointerEvents = "none";
+    rezultati.style.pointerEvents = "none";
 
 });
