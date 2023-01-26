@@ -32,17 +32,28 @@ let input = document.querySelector('#igraci');
 let ime;
 let dodaj = document.querySelector('#dodaj');
 let nizImena = [];
+let igra = document.querySelector('#igra');
+let rezultati = document.querySelector('#rezultati');
 
 dodaj.addEventListener('click', () => {
     let inputValue = input.value;
     ime = inputValue;
     if (ime === "") {
         alert("Unesite korisnicko ime");
+
     }
     nizImena.push(ime);
     for (let i = 0; i < nizImena.length; i++) {
         if (nizImena[i] === nizImena[i + 1]) {
             alert("Korisnicko ime je vec uneto");
+            ime.pop();
+
+        }
+        if (i > 4) {
+            alert("Nije vise moguce uneti igraca");
+            dodaj.disabled = true;
+            igra.style.pointerEvents = "all";
+            rezultati.style.pointerEvents = "none";
 
         }
     }
@@ -50,7 +61,7 @@ dodaj.addEventListener('click', () => {
     let validacijaImena = /^([a-z]+[\d]+)$/
     let provera = ime.match(validacijaImena);
     if (provera != null) {
-        alert("Unet je ispravno korisnicko ime");
+        // alert("Unet je ispravno korisnicko ime");
     } else {
         alert("Korisnicko ime nije ispravno");
     }
