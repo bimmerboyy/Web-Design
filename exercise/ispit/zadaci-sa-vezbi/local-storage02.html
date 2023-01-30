@@ -6,10 +6,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Local Storage</title>
+    <style>
+        input,
+        button {
+            padding: 7px;
+            height: 40px;
+        }
+        
+        fieldset {
+            margin-bottom: 20px;
+        }
+    </style>
 </head>
 
 <body>
+    <!-- <h1>Unesite ime</h1>
+    <input type="text">
+    <button>Prosledi</button> -->
+    <h1>Local Storage</h1>
+    <fieldset>
+        <legend>
+            Insert Data
+        </legend>
+        <input type="text" id="inpKey" placeholder="Enter key...">
+        <input type="text" id="inpValue" placeholder="Enter value...">
+        <button type="button" id="btnInsert">Insert Data</button>
+    </fieldset>
 
+
+    <fieldset>
+        <legend>
+            Local Storage Output
+        </legend>
+        <div id="lsOutput"></div>
+    </fieldset>
+
+    <script src="../zadaci-sa-vezbi/local-storage02.js"></script>
 </body>
 
 </html>
