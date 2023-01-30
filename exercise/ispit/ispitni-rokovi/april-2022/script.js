@@ -70,6 +70,8 @@ dodaj.addEventListener('click', () => {
     if (newData == "") {
         oldData.pop();
     }
+
+
     let oldData = JSON.parse(localStorage.getItem('data'));
     oldData.push(newData);
     localStorage.setItem('data', JSON.stringify(oldData));
@@ -77,9 +79,8 @@ dodaj.addEventListener('click', () => {
         if (oldData[i] === oldData[i + 1]) {
             oldData.splice(i, 1);
             localStorage.setItem('oldData', JSON.stringify(oldData));
-            let igrac = localStorage.getItem('oldData', JSON.stringify(oldData));
-            igrac.pop();
-            localStorage.setItem('igrac', JSON.stringify(igrac));
+
+
         }
     }
 
@@ -92,5 +93,6 @@ reset.addEventListener('click', () => {
     dodaj.disabled = false;
     igra.style.pointerEvents = "none";
     rezultati.style.pointerEvents = "none";
+    localStorage.removeItem("data");
 
 });

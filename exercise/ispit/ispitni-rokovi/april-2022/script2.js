@@ -29,6 +29,8 @@ let startTimer = () => {
     }
 }
 
+
+
 buttonStart.addEventListener("click", () => {
     interval = setInterval(startTimer);
     buttonStart.disabled = true;
@@ -39,6 +41,26 @@ buttonStop.addEventListener("click", () => {
     clearInterval(interval);
     buttonStop.disabled = true;
     buttonStart.disabled = false;
+
+    if (localStorage.getItem('data') == null) {
+        localStorage.setItem('data', '[]');
+    }
+    let localSeconds = [];
+
+    localSeconds = JSON.parse(localStorage.getItem('data'));
+    localSeconds.push(appendSeconds.innerHTML);
+    localStorage.setItem('localSeconds', JSON.stringify(localSeconds));
+
+
+
+    if (localStorage.getItem('data') == null) {
+        localStorage.setItem('data', '[]');
+    }
+    let localTens = [];
+
+    localTens = JSON.parse(localStorage.getItem('data'));
+    localTens.push(appendTens.innerHTML);
+    localStorage.setItem('localTens', JSON.stringify(localTens));
 });
 
 buttonReset.addEventListener("click", () => {
@@ -54,10 +76,7 @@ if (localStorage.getItem('data') != null) {
     let igrac = [];
     data.push(JSON.parse(localStorage.getItem('oldData')));
     for (let i = 0; i < data.length; i++) {
-        if (data[i] === data[i + 1]) {
-
-        }
-        alert("Sada ce igrati igrac" + data[i]);
+        console.log(data[i]);
     }
 
 
