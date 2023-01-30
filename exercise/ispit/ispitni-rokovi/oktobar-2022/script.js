@@ -6,42 +6,31 @@ na podlogu "licem" tako da su sva slova skrivena. Klikom na kartu ona se okreće
 se slovo koje se nalazi na njoj. Možemo otvoriti jos jednu karticu i ako su slova ista one
 se brišu a ako nisu vraćaju se okrenute ka podlozi. Kraj igre je kad su sve kartice izbrisane.*/
 
-
 let filpCard = () => {
-    let cards = document.querySelectorAll('.card');
-    let removeImage = document.querySelectorAll('.card img');
+    let cards = document.querySelectorAll(".card");
+    let removeImage = document.querySelectorAll(".card img");
     removeImage.forEach((images, index) => {
         images.parentNode.removeChild(images);
-
-
     });
-    cards.forEach(card => {
+    cards.forEach((card) => {
         card.style.border = "1px solid black";
     });
 };
 
 let addRandomNumber = () => {
-    let cards = document.querySelectorAll('.card');
-    let characters = 'abcdefghijklmnopqrstuvwxyz';
+    let cards = document.querySelectorAll(".card");
+    let characters = "abcdefghijklmnopqrstuvwxyz";
 
-    cards.forEach(card => {
-        let p = document.createElement('p');
+    cards.forEach((card) => {
+        let p = document.createElement("p");
         for (let i = 0; i < 8; i++) {
-
-            p.innerHTML += characters.charAt(Math.floor(Math.random() * characters.length));
+            p.innerHTML += characters.charAt(
+                Math.floor(Math.random() * characters.length)
+            );
             card.appendChild(p);
-
         }
-
-
     });
-
 };
-
-
-
-
-
 
 // let parent = document.querySelector('.grid-cards');
 // parent.addEventListener('click', addFunctions, false);
@@ -51,33 +40,27 @@ let addRandomNumber = () => {
 //         let clickedCard = e.target.id;
 //         console.log(clickedCard);
 
-
 //     }
 //     e.stopPropagation();
 // };
 
-
-
-let cards = document.querySelectorAll('.card');
+let cards = document.querySelectorAll(".card");
 
 // let cardArray = Array.from(cards);
 // console.log(cardArray);
 
 cards.forEach((card, index) => {
-    card.addEventListener('click', event => {
+    card.addEventListener("click", (event) => {
         // let clickedCard = event.currentTarget;
         // console.log(clickedCard);
         // let indexOfClickedCard = cardArray.indexOf(clickedCard);
         // if (indexOfClickedCard === index) {
 
         // }
+
+        console.log(event.target);
+
         filpCard();
         addRandomNumber();
-
     });
-
-
-
-
-
 });
