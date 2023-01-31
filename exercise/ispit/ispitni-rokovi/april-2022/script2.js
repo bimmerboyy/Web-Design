@@ -1,14 +1,21 @@
 let seconds = 00;
 let tens = 00;
 
-let appendTens = document.getElementById('tens');
-let appendSeconds = document.getElementById('seconds');
-let buttonStart = document.getElementById('start');
-let buttonStop = document.getElementById('stop');
-let buttonReset = document.getElementById('reset');
+let appendTens = document.getElementById("tens");
+let appendSeconds = document.getElementById("seconds");
+let buttonStart = document.getElementById("start");
+let buttonStop = document.getElementById("stop");
+let buttonReset = document.getElementById("reset");
+let igracNaRedu = document.getElementById("igracNaRedu");
 
+let indexIgraca = 0;
 let interval;
+
 buttonStop.disabled = true;
+
+let data = JSON.parse(localStorage.getItem("data"));
+let nizImena = data.map((igrac) => igrac.ime);
+igracNaRedu.innerHTML = nizImena[indexIgraca];
 
 let startTimer = () => {
     tens++;
@@ -27,9 +34,7 @@ let startTimer = () => {
     if (seconds > 9) {
         appendSeconds.innerHTML = seconds;
     }
-}
-
-
+};
 
 buttonStart.addEventListener("click", () => {
     interval = setInterval(startTimer);
@@ -39,45 +44,43 @@ buttonStart.addEventListener("click", () => {
 
 buttonStop.addEventListener("click", () => {
     clearInterval(interval);
+
     buttonStop.disabled = true;
     buttonStart.disabled = false;
 
-    if (localStorage.getItem('data') == null) {
-        localStorage.setItem('data', '[]');
+    data[indexIgraca].vreme.seconds = seconds;
+    data[indexIgraca].vreme.tens = tens;
+
+    if (indexIgraca === nizImena.length - 1) {
+        localStorage.setItem("data", JSON.stringify(data));
+        alert("Kraj igre");
+        buttonStart.disabled = true;
+        return;
     }
-    let localSeconds = [];
 
-    localSeconds = JSON.parse(localStorage.getItem('data'));
-    localSeconds.push(appendSeconds.innerHTML);
-    localStorage.setItem('localSeconds', JSON.stringify(localSeconds));
+    seconds = "00";
+    tens = "00";
+    appendSeconds.innerHTML = seconds;
+    appendTens.innerHTML = tens;
 
-
-
-    if (localStorage.getItem('data') == null) {
-        localStorage.setItem('data', '[]');
-    }
-    let localTens = [];
-
-    localTens = JSON.parse(localStorage.getItem('data'));
-    localTens.push(appendTens.innerHTML);
-    localStorage.setItem('localTens', JSON.stringify(localTens));
+    indexIgraca++;
+    igracNaRedu.innerHTML = nizImena[indexIgraca];
 });
 
 buttonReset.addEventListener("click", () => {
     clearInterval(interval);
-    tens = '00';
-    seconds = '00';
+    tens = "00";
+    seconds = "00";
     appendSeconds.innerHTML = seconds;
     appendTens.innerHTML = tens;
+    localStorage.setItem(
+        "data",
+        JSON.stringify(
+            nizImena.map((ime) => ({ ime, vreme: { seconds: 0, tens: 0 } }))
+        )
+    );
+    indexIgraca = 0;
+    igracNaRedu.innerHTML = nizImena[indexIgraca];
+    buttonStart.disabled = false;
+    buttonStop.disabled = true;
 });
-
-if (localStorage.getItem('data') != null) {
-    let data = [];
-    let igrac = [];
-    data.push(JSON.parse(localStorage.getItem('oldData')));
-    for (let i = 0; i < data.length; i++) {
-        console.log(data[i]);
-    }
-
-
-}
