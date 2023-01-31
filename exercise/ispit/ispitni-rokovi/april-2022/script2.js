@@ -37,7 +37,7 @@ let startTimer = () => {
 };
 
 buttonStart.addEventListener("click", () => {
-    interval = setInterval(startTimer);
+    interval = setInterval(startTimer, 10);
     buttonStart.disabled = true;
     buttonStop.disabled = false;
 });
