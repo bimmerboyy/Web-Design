@@ -71,22 +71,38 @@ function removeCard(event) {
     let clickedCard = event.currentTarget;
     let image = document.querySelectorAll('img');
     let slovo = document.querySelectorAll('.slovo');
+    //uzimamo samo dva elementa koja uporedjujemo
     for (let i = 0; i < image.length; i++) {
         if (i % 2 == 0) {
             nizSlova = [];
         }
     }
 
-
-    let noviNiz = [];
     for (let i = 0; i < image.length; i++) {
+        //stavljamo uslov da gledamo samo otvorene kartice
         if (image[i].classList.contains("flip")) {
+            //dodajemo slova iz otvorenih kartica
             nizSlova[i] = slovo[i].innerHTML;
-            if (nizSlova[nizSlova.indexOf(nizSlova[i])] === nizSlova[nizSlova.length - 1] && i > 2 && sizeof(nizSlova) > 1) {
-                console.log("radi");
+            //npr ako kliknemo karticu 0 i 15 stvorice se prazan prostor izmedju
+            //ova funkcija sluzi da makne taj prazan prostor
+            nizSlova = nizSlova.filter(entry => entry.trim() != '');
+            cardElements.forEach(card => {
+                //proveravamo da li su slova jednaka 
+                if (nizSlova[0] === nizSlova[1]) {
+                    //uzimamo sva slova iz kartica
+                    let slovoKartice = card.querySelectorAll(".slovo");
+                    for (let i = 0; i < slovoKartice.length; i++) {
+                        //prolazimo kroz sva slova i ukoliko su jednaka sa nasim pogotkom
+                        if (slovoKartice[i].innerHTML === nizSlova[0]) {
+                            //brisemo kartice
+                            card.remove();
 
-            }
-            console.log(nizSlova);
+                        }
+
+                    }
+
+                }
+            });
         }
     }
 }

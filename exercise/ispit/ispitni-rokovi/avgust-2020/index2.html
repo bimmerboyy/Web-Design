@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        #prikaz {
+            width: 700px;
+            border: 2px solid black;
+            text-align: center;
+            color: black;
+        }
+        
+        #prikaz h1 {
+            text-align: center;
+            padding: 20px;
+        }
+        
+        #levi {
+            margin-left: 0;
+            width: 50%;
+        }
+        
+        #desni {
+            margin-right: 0;
+            width: 50%;
+            white-space: pre;
+            text-align: left;
+            line-height: 30px;
+        }
+        
+        img {
+            width: 300px;
+            height: 300px;
+            margin-bottom: 20px;
+        }
+        
+        #row {
+            display: flex;
+        }
+        
+        button {
+            width: 40px;
+            height: 40px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AUTOMOBIL</title>
+</head>
+
+<body>
+
+    <div id="prikaz"></div>
+    <div id="row"></div>
+    <div id="desni"></div>
+    <div id="levi"></div>
+
+
+
+    <script>
+        class Automobil {
+            constructor(sifra, naziv, cena, km, snaga, boja, url) {
+                this.sifra = sifra;
+                this.naziv = naziv;
+                this.cena = cena;
+                this.km = km;
+                this.snaga = snaga;
+                this.boja = boja;
+                this.url = url;
+                var niz = ["auto1.jpg", "auto2.jpg", "auto3.jpg"];
+            }
+
+            validacija() {
+                if (this.sifra == "" || this.cena == 0 || this.naziv == "") return "NULL";
+            }
+
+            ispis() {
+                //var par = `${this.sifra}<br>${this.naziv}<br>${this.cena}<br>${this.km}<br>${this.snaga}<br>${this.boja}<br>`;
+                var divv = document.getElementById("prikaz");
+                var r = document.getElementById("desni");
+                var l = document.getElementById("levi");
+                var red = document.getElementById("row");
+
+                divv.appendChild(red);
+                red.appendChild(l);
+                red.appendChild(r);
+
+                var podaci = document.createTextNode("\n\nSIFRA: " + this.sifra + "\nNAZIV: " + this.naziv + "\nCENA: " + this.cena + "\nKILOMETRAZA: " + this.km + "\nSNAGA MOTORA: " + this.snaga + "\nBOJA: " + this.boja);
+
+
+
+                var slika = document.createElement("img");
+                slika.setAttribute("src", this.url);
+                l.appendChild(slika);
+
+                r.appendChild(podaci);
+
+                var butt = document.createElement("div");
+                divv.appendChild(butt);
+
+                var b1 = document.createElement("button");
+                var b2 = document.createElement("button");
+
+                var sc1 = document.createTextNode("<<");
+                var sc2 = document.createTextNode(">>");
+
+                l.appendChild(butt);
+                butt.appendChild(b1);
+                butt.appendChild(b2);
+                b1.appendChild(sc1);
+
+                b1.setAttribute("onclick", "f1()");
+                b2.appendChild(sc2);
+
+
+            }
+        }
+
+        function f1() {
+            document.getElementsByTagName("img").setAttribute("src", "auto2.jpg");
+        }
+
+        var auto = new Automobil("123", "MERCEDES", 10000, 250000, 570, "CRNA", "auto1.jpg");
+        auto.ispis();
+        document.write("<br>");
+    </script>
+
+</body>
+
+</html>
