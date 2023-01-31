@@ -27,72 +27,76 @@ sa rezultatima. Prilikom povratka sa stranice sa rezultatima na stranicu sa igro
 je bio na potezu Treca stranica (slika3) predstavlja stranicu sa rezultatima. Sadrži tabelu u kojoj se redom ispisuju imena
 svih igrača, vremena onih igrača koji su do tog trenutka odigrali svoj potez dodatne informacije o igraču */
 
-
-let input = document.querySelector('#igraci');
-let ime;
-let dodaj = document.querySelector('#dodaj');
+let input = document.querySelector("#igraci");
+let dodaj = document.querySelector("#dodaj");
 let nizImena = [];
-let igra = document.querySelector('#igra');
-let rezultati = document.querySelector('#rezultati');
+let igra = document.querySelector("#igra");
+let rezultati = document.querySelector("#rezultati");
+let resetBtn = document.querySelector("#reset");
 
-dodaj.addEventListener('click', () => {
-    let inputValue = input.value;
-    ime = inputValue;
+dodaj.addEventListener("click", () => {
+    let ime = input.value;
+
+    if (nizImena.length > 4) {
+        alert("Maksimalan broj igrača je 5");
+        dodaj.disabled = true;
+        return;
+    }
+
     if (ime === "") {
         alert("Unesite korisnicko ime");
     }
-    nizImena.push(ime);
-    for (let i = 0; i < nizImena.length; i++) {
-        if (nizImena[i] === nizImena[i + 1]) {
-            alert("Korisnicko ime je vec uneto");
-            nizImena.pop();
-        }
-        if (i > 4) {
-            alert("Nije vise moguce uneti igraca");
-            dodaj.disabled = true;
-            igra.style.pointerEvents = "all";
-            rezultati.style.pointerEvents = "all";
-        }
+
+    if (nizImena.includes(ime)) {
+        alert("Korisnicko ime je vec uneto");
+        return;
     }
-    let validacijaImena = /^([a-z]+[\d]+)$/
+
+    let validacijaImena = /^([a-z]+[\d]+)$/;
     let provera = ime.match(validacijaImena);
-    if (provera != null) {
-        // alert("Unet je ispravno korisnicko ime");
-    } else {
+    if (!provera) {
         alert("Korisnicko ime nije ispravno");
+        return;
     }
 
-    if (localStorage.getItem('data') == null) {
-        localStorage.setItem('data', '[]');
+    nizImena.push(ime);
+
+    if (nizImena.length === 5) {
+        igra.style.pointerEvents = "auto";
+        rezultati.style.pointerEvents = "auto";
+
+        localStorage.setItem(
+            "data",
+            JSON.stringify(
+                nizImena.map((ime) => ({ ime, vreme: { seconds: 0, tens: 0 } }))
+            )
+        );
+
+        // Radi isto:
+        // let data = []
+
+        // nizImena.forEach(ime => {
+        //     data.push ( { ime, vreme: {seconds: 0,  tens: 0}  })
+        // })
+        // let jsonData = JSON.stringify(data);
+        // localStorage.setItem("data", data);
     }
-
-    let newData = inputValue;
-    if (newData == "") {
-        oldData.pop();
-    }
-
-
-    let oldData = JSON.parse(localStorage.getItem('data'));
-    oldData.push(newData);
-    localStorage.setItem('data', JSON.stringify(oldData));
-    for (let i = 0; i < oldData.length; i++) {
-        if (oldData[i] === oldData[i + 1]) {
-            oldData.splice(i, 1);
-            localStorage.setItem('oldData', JSON.stringify(oldData));
-
-
-        }
-    }
-
 });
 
-let reset = document.querySelector('#reset');
+resetBtn.addEventListener("click", reset);
 
-reset.addEventListener('click', () => {
-    nizImena.splice(0, nizImena.length);
+function reset() {
+    nizImena = [];
     dodaj.disabled = false;
     igra.style.pointerEvents = "none";
     rezultati.style.pointerEvents = "none";
     localStorage.removeItem("data");
+}
 
+reset();
+
+input.addEventListener("keyup", (e) => {
+    if (e.keyCode === 13) {
+        dodaj.click();
+    }
 });
