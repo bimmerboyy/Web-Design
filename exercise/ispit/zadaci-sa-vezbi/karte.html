@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Card Game</title>
+</head>
+
+<body>
+    <h1>Card Game</h1>
+    <div>
+        <label>Enter player 1 name:</label>
+        <input id="player1" type="text" aria-label="playe1">
+    </div>
+    <div>
+        <label>Enter player 2 name:</label>
+        <input id="player2" type="text" aria-label="playe1">
+    </div>
+    <button id="startBtn">Start</button>
+    <br><br>
+    <div id="player1BtnContainer">
+        <button id="player1Btn">Play</button>
+    </div>
+    <div id="player2BtnContainer">
+        <button id="player2Btn">Play</button>
+    </div>
+    <br><br>
+    <div id="scoreContainer">
+        <p id="score"></p>
+    </div>
+
+    <script>
+        const suits = ['diamond', 'hertz', 'spade', 'club'];
+        const values = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Z', 'D', 'K'];
+        const cardValues = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
+        let player1Cards = [];
+        let player2Cards = [];
+        let player1Name;
+        let player2Name;
+        let player1Turn = true;
+        let player1Score = 0;
+        let player2Score = 0;
+
+
+        const startBtn = document.querySelector('#startBtn');
+        startBtn.addEventListener('click', function() {
+            player1Name = document.querySelector('#player1').value;
+            player2Name = document.querySelector('#player2').value;
+            document.querySelector('#score').innerHTML = `Current score: ${player1Name} - ${player1Score} vs ${player2Name} - ${player2Score}`;
+            player1Btn.disabled = false;
+            player2Btn.disabled = true;
+        });
+
+        const player1Btn = document.querySelector('#player1Btn');
+        player1Btn.addEventListener('click', function() {
+            const newCard = generateCard();
+            player1Cards.push(newCard);
+            if (player1Cards.length === 5) {
+                player1Btn.disabled = true;
+                player2Btn.disabled = false;
+                determineWinner();
+            }
+        });
+
+        const player2Btn = document.querySelector('#player2Btn');
+        player2Btn.addEventListener('click', function() {
+                const newCard = generateCard();
+                player2Cards.push(newCard);
+                if (player2Cards.length === 5) {
+                    player2Btn.disabled = true;
+                    player1Btn.disabled = false;
+                }
+            }
+
+        );
