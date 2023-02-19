@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch API</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: rgba(71, 232, 71, 0.5);
+        }
+        
+        .placeholder {
+            width: 250px;
+            height: 350px;
+            margin-bottom: 30px;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        img {
+            width: 250px;
+            height: 350px;
+        }
+        
+        button {
+            height: 30px;
+            border: none;
+            border-radius: 5px;
+            background-color: rgba(24, 154, 24, 0.5);
+            cursor: pointer;
+        }
+        
+        button:hover {
+            background-color: rgba(48, 198, 48, 0.5);
+        }
+        
+        .animals {
+            display: flex;
+            justify-content: space-between;
+            width: 600px;
+        }
+        
+        .animals .dog {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .animals .cat {
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="animals">
+        <div class="dog">
+            <div class="placeholder" id="dog">
+                <span>Random Dog</span>
+                <!-- <img src="domestic-dog_thumb_4x3.avif" alt=""> -->
+            </div>
+
+            <button class="dog-button">Dog</button>
+        </div>
+        <div class="cat">
+            <!-- <img src="NationalGeographic_2572187_square.webp" alt=""> -->
+            <div class="placeholder" id="cat">
+                <span>Random Cat</span>
+            </div>
+            <button class="cat-button">Cat</button>
+        </div>
+    </div>
+    <script src="fetch01.js"></script>
+</body>
+
+</html>
