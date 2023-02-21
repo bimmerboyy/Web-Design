@@ -25,7 +25,7 @@ prijaviPronadjeno.addEventListener("click", () => {
     unetaBoja = bojaPronadjeno.value;
     unetaOgrlica = ogrlicaPronadjeno.value;
     if (br === 0) {
-        zivotinja1 = new Zivotinja(unetaVrsta, unetaBoja, unetaOgrlica, "pronadjena");
+        zivotinja1 = new Zivotinja(unetaVrsta, unetaBoja, unetaOgrlica, "izgubljena");
         nizZivotinja.push(zivotinja1);
     }
     if (br === 1) {
@@ -42,6 +42,8 @@ prijaviPronadjeno.addEventListener("click", () => {
         unetaVrsta.value = "";
         unetaBoja.value = "";
     }
+    localStorage.setItem("zivotinje", JSON.stringify(nizZivotinja));
+
 
 
 
@@ -49,12 +51,14 @@ prijaviPronadjeno.addEventListener("click", () => {
 
     proveri = () => {
         for (let i = 0; i < nizZivotinja.length; i++) {
-            if (nizZivotinja[i].tip === 'pronadjena') {
-                console.log("jeste");
-            }
-            if (nizZivotinja[i].vrsta === vrstaIzgubljeno.value && nizZivotinja[i].boja === bojaIzgubljeno.value && nizZivotinja[i].ogrlica === ogrlicaIzgubljeno.value) {
+
+
+            if (nizZivotinja[i].vrsta === vrstaIzgubljeno.value && nizZivotinja[i].boja === bojaIzgubljeno.value && nizZivotinja[i].ogrlica === ogrlicaIzgubljeno.value && nizZivotinja[i].tip === 'pronadjena') {
+                alert("Pronadjena je " + nizZivotinja[i].vrsta);
                 nizZivotinja.splice(i, 1)
 
+            } else if (nizZivotinja[i].tip === "izgubljena") {
+                alert("Nije pronadjena");
             }
 
         }
@@ -85,5 +89,6 @@ let ogrlicaIzgubljeno = document.getElementById('ogrlica');
 let prijaviIzgubljeno = document.getElementById('prijavi-izgubljeno');
 
 prijaviIzgubljeno.addEventListener('click', () => {
+
     proveri();
 });
