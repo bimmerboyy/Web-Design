@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dictionary App</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #ada0ff;
+        }
+        
+        .main-div {
+            height: 450px;
+            width: 800px;
+            background-color: white;
+            border: none;
+            border-radius: 30px;
+            -webkit-box-shadow: 0 0 10px rgb(140, 140, 140);
+            box-shadow: 0 0 10px rgb(140, 140, 140);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 100px;
+        }
+        
+        .search-part {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 630px;
+            margin-bottom: 100px;
+        }
+        
+        .search-part input {
+            width: 450px;
+            border: none;
+            border-bottom: 3px solid #ada0ff;
+            outline: 0;
+            padding-bottom: 7px;
+            height: 30px;
+            font-size: 20px;
+        }
+        
+        .search-part input::placeholder {
+            font-size: 20px;
+        }
+        
+        .search {
+            padding: 15px 40px;
+            background-color: #ada0ff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        
+        .search:hover {
+            background-color: #c1b8fb;
+        }
+        
+        .show-part {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .show-part .word-div {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 600px;
+        }
+        
+        .show-part .word-div .word {
+            font-size: 30px;
+            font-weight: bold;
+            font-family: Arial;
+            margin: 0;
+        }
+        
+        .show-part .word-div i {
+            font-size: 20px;
+            color: #ada0ff;
+            cursor: pointer;
+        }
+        
+        .type {
+            font-family: Arial;
+            color: rgb(186, 186, 186);
+            letter-spacing: 1px;
+            font-size: 20px;
+        }
+        
+        .description {
+            font-family: Arial;
+            font-size: 20px;
+            color: rgb(79, 79, 79);
+        }
+        
+        .word-meaning {
+            font-family: Arial;
+            color: rgb(137, 137, 137);
+            letter-spacing: 1px;
+            font-size: 20px;
+            border-left: 5px solid #ada0ff;
+            padding-left: 10px;
+            width: 450px;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="main-div">
+        <div class="search-part">
+            <input type="text" placeholder="Type word here..">
+            <button class="search">Search</button>
+        </div>
+
+        <div class="show-part">
+
+
+        </div>
+
+    </div>
+    <script src="https://kit.fontawesome.com/4f1f210561.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

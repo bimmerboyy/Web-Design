@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Januar 2023</title>
+    <style>
+        .image-div {
+            background-image: url('dog-cat-under-sheet.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+            height: 600px;
+            position: relative;
+        }
+        
+        .buttons {
+            display: grid;
+            grid-template-columns: 200px 200px;
+            column-gap: 100px;
+            row-gap: 100px;
+            position: absolute;
+            top: 50%;
+            right: 20%;
+        }
+        
+        .buttons button {
+            padding: 15px 30px;
+            font-size: 20px;
+            background-color: rgb(192, 220, 10);
+            border: none;
+            cursor: pointer;
+        }
+        
+        .buttons button:hover {
+            transform: scale(1.05);
+        }
+        
+        p {
+            font-size: 25px;
+        }
+        
+        .pronadjeno-div {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            width: 300px;
+        }
+        
+        .izgubljeno-dv {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            width: 300px;
+        }
+        
+        .boja-div input {
+            margin-left: 17px;
+        }
+        
+        .vrsta-div select {
+            margin-left: 13px;
+        }
+        
+        .prijavi {
+            padding: 10px 15px;
+            cursor: pointer;
+            font-size: 15px;
+            background-color: rgb(192, 220, 10);
+            border: none;
+            cursor: pointer;
+        }
+        
+        .prijavi:hover {
+            background-color: rgb(206, 226, 76);
+        }
+        
+        .main-div {
+            display: flex;
+            justify-content: space-between;
+            width: 900px;
+        }
+        
+        .main-flex {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 300px;
+        }
+        
+        #boja {
+            margin-left: 13.5px;
+        }
+        
+        #ogrlica {
+            margin-left: 0;
+        }
+        
+        .ogrlica-div {
+            display: flex;
+        }
+        
+        #vrsta {
+            margin-left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="image-div">
+        <div class="buttons">
+            <button class="pronadjeno">Pronadjeno</button>
+            <button class="izgubljeno">Izgubljeno</button>
+            <button class="kupujem">Kupujem</button>
+            <button class="doniram">Doniram</button>
+        </div>
+    </div>
+    <div class="main-flex">
+        <div class="main-div">
+            <div class="pronadjeno-div">
+                <p class="pronadjeno">Pronadjeno</p>
+                <div class="vrsta-div">
+                    <label for="vrsta">Vrsta:</label>
+                    <select name="vrsta" id="pronadjeno-vrsta">
+                        
+                        <option value="pas">Pas</option>
+                        <option value="macka">Macka</option>
+                       
+                    </select>
+
+                </div>
+                <div class="boja-div">
+                    <label for="boja">Boja:</label>
+                    <input type="text" name="boja" id="boja-pronadjeno">
+
+                </div>
+                <div class="ogrlica-div">
+                    <label for="ogrlica">Ogrlica:</label>
+                    <input type="text" name="ogrlica" id="ogrlica-pronadjeno">
+                </div>
+                <button class="prijavi" id="pronadjeno-prijavi">Prijavi</button>
+
+            </div>
+
+
+            <div class="izgubljeno-div">
+                <p class="izgubljeno">Izgubljeno</p>
+                <div class="vrsta-div">
+                    <label for="vrsta">Vrsta:</label>
+                    <select name="vrsta" id="vrsta">
+                        <option value="pas">Pas</option>
+                        <option value="macka">Macka</option>
+                    </select>
+
+                </div>
+                <div class="boja-div">
+                    <label for="boja">Boja:</label>
+                    <input type="text" name="boja" id="boja">
+
+                </div>
+                <div class="ogrlica-div">
+                    <label for="ogrlica">Ogrlica:</label>
+                    <input type="text" name="ogrlica" id="ogrlica">
+                </div>
+                <button class="prijavi" id="prijavi-izgubljeno">Prijavi</button>
+
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
