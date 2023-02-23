@@ -6,9 +6,55 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Timovi</title>
+    <style>
+        .rezultat {
+            width: 30px;
+        }
+        
+        .unos {
+            margin-bottom: 50px;
+            margin-top: 50px;
+        }
+        
+        .buttons button {
+            margin-right: 30px;
+        }
+        
+        table {
+            margin-top: 100px;
+            width: 500px;
+        }
+        
+        table,
+        tr,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
 </head>
 
 <body>
+
+    <div class="unos">
+        <label for="tim1">Unesite prvi tim</label>
+        <input type="text" name="tim1" id="prvi-tim">
+        <input type="number" class="rezultat" min="0" id="rezultat-prvog">
+        <input type="number" name="" id="rezultat-drugog" class="rezultat" min="0">
+
+        <input type="text" name="tim2" id="drugi-tim">
+        <label for="tim2">Unesite drugi tim</label>
+    </div>
+    <div class="buttons">
+        <button class="snimi">SNIMI</button>
+        <button class="kraj-prvenstva">KRAJ PRVENTSTVA</button>
+
+        <table>
+
+
+        </table>
+    </div>
     <script src="moj-nacin.js"></script>
 </body>
 
